@@ -12,7 +12,7 @@ export function ThemeSwitcher() {
     <FontAwesomeIcon
       icon={faCircleHalfStroke}
       onClick={() => dispatch(toggleTheme())}
-      className={`fixed top-4 right-4 rounded font-bold z-50 cursor-pointer px-2 py-2
+      className={`rounded font-bold z-50 cursor-pointer px-2 py-2
         ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}
     />
   );

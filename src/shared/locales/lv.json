@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "brand": "Portfelis",
+    "home": "Sākums",
+    "about": "Par mani",
+    "projects": "Projekti",
+    "skills": "Prasmes",
+    "contact": "Kontakti"
+  },
+  "home": {
+    "title": "Sveiki 👋 Esmu izstrādātājs",
+    "subtitle": "Specializējos {{ts}} un {{csharp}}. Veidoju tīmekļa lietotnes, API un saskarnes.",
+    "resume": "Lejupielādēt CV",
+    "contact": "Sazināties"
+  }
+}
