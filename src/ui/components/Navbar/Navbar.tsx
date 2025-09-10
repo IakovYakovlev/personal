@@ -1,26 +1,18 @@
 import { useSelector } from 'react-redux';
-import type { RootState } from '../../application/store';
-
 import { useTranslation } from 'react-i18next';
-import { ThemeSwitcher } from './ThemeSwitcher';
-import { LanguageSwitcher } from './LanguageSwitcher';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router';
+import type { RootState } from '../../../application/store';
+import { LanguageSwitcher } from '../LanguageSwitcher';
+import { ThemeSwitcher } from '../ThemeSwitcher';
+import { navbarLinks } from './navbarLinks';
 
 export const Navbar = () => {
   const theme = useSelector((state: RootState) => state.theme.theme);
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-
-  const links = [
-    { to: '/', label: t('nav.home') },
-    { to: '/about', label: t('nav.about') },
-    { to: '/projects', label: t('nav.projects') },
-    { to: '/skills', label: t('nav.skills') },
-    { to: '/contact', label: t('nav.contact') },
-  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,7 +37,7 @@ export const Navbar = () => {
 
       {/* Десктопное меню */}
       <ul className='hidden md:flex gap-6'>
-        {links.map(({ to, label }) => (
+        {navbarLinks.map(({ to, labelKey }) => (
           <li key={to}>
             <NavLink
               to={to}
@@ -59,7 +51,7 @@ export const Navbar = () => {
                 }`
               }
             >
-              {label}
+              {t(labelKey)}
             </NavLink>
           </li>
         ))}
@@ -83,7 +75,7 @@ export const Navbar = () => {
             ${theme === 'dark' ? 'bg-[#0f172a] text-white' : 'bg-white text-black'}`}
         >
           <ul className='flex flex-col gap-6'>
-            {links.map(({ to, label }) => (
+            {navbarLinks.map(({ to, labelKey }) => (
               <li key={to}>
                 <NavLink
                   to={to}
@@ -98,7 +90,7 @@ export const Navbar = () => {
                   }
                   onClick={() => setIsOpen(false)}
                 >
-                  {label}
+                  {t(labelKey)}
                 </NavLink>
               </li>
             ))}

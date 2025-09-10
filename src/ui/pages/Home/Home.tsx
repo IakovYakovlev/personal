@@ -1,23 +1,56 @@
+import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Trans, useTranslation } from 'react-i18next';
+
 export const Home = () => {
+  const { t } = useTranslation();
   return (
     <section className='flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] px-6 text-center'>
-      <h1 className='text-4xl md:text-6xl font-bold mb-6 text-cyan-400'>Привет 👋 Я разработчик</h1>
+      <h1 className='text-4xl md:text-6xl font-bold mb-4 text-primary-light'>{t('home.welcome')}</h1>
+
+      <p className='text-xl md:text-2xl font-semibold text-gray-200 mb-2'>{t('home.greeting')}</p>
+
+      <p className='italic text-gray-400 mb-6'>{t('home.slogan')}</p>
+
       <p className='text-lg md:text-xl text-gray-300 max-w-2xl'>
-        Специализируюсь на <span className='text-cyan-300'>TypeScript</span> и <span className='text-cyan-300'>C#</span>
-        . Разрабатываю веб-приложения, API и делаю красивые интерфейсы.
+        <Trans i18nKey='home.description'>
+          Я разработчик, специализирующийся на
+          <span className='text-primary-light'>TypeScript</span> и <span className='text-primary-light'>C#</span>.
+        </Trans>
       </p>
-      <div className='mt-8 flex gap-4'>
+
+      <div className='mt-8 flex gap-4 flex-wrap justify-center'>
         <a
-          href='/resume.pdf'
-          className='px-6 py-3 rounded bg-cyan-500 text-white font-semibold hover:bg-cyan-400 transition'
+          href='/projects'
+          className='px-6 py-3 rounded bg-primary text-white font-semibold hover:bg-primary-light transition'
         >
-          Скачать резюме
+          {t('home.cta.projects')}
         </a>
         <a
-          href='/contact'
-          className='px-6 py-3 rounded border border-cyan-500 text-cyan-400 font-semibold hover:bg-cyan-500 hover:text-white transition'
+          href='/about'
+          className='px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition'
         >
-          Связаться
+          {t('home.cta.about')}
+        </a>
+        <a
+          href='/resume.pdf'
+          className='px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition'
+        >
+          {t('home.cta.resume')}
+        </a>
+      </div>
+
+      {/* 🎯 иконки соцсетей */}
+      <div className='flex gap-6 mt-10 text-2xl text-gray-400 hover:text-primary-light transition'>
+        <a href='https://github.com/your-profile' target='_blank'>
+          <FontAwesomeIcon icon={faFacebook} />
+        </a>
+        <a href='https://linkedin.com/in/your-profile' target='_blank'>
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+        <a href='https://t.me/your-profile' target='_blank'>
+          <FontAwesomeIcon icon={faAddressCard} />
         </a>
       </div>
     </section>

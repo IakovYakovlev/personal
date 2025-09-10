@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
-import './App.css';
 import { publicRoutes } from './router';
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';

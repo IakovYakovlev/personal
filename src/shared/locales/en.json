@@ -8,9 +8,14 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Hi 👋 I'm a developer",
-    "subtitle": "I specialize in {{ts}} and {{csharp}}. Building web apps, APIs and interfaces.",
-    "resume": "Download Resume",
-    "contact": "Contact"
+    "welcome": "Welcome 👋",
+    "greeting": "Glad to see you in my portfolio!",
+    "slogan": "From ideas to a working product.",
+    "description": "I am a developer specializing in <1>TypeScript</1> and <3>C#</3>. I help companies and teams build fast, reliable, and modern web applications, APIs, and beautiful interfaces.",
+    "cta": {
+      "projects": "View Projects",
+      "about": "Learn More About Me",
+      "resume": "Download Resume"
+    }
   }
 }

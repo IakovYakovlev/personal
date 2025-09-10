@@ -8,9 +8,14 @@
     "contact": "Kontakti"
   },
   "home": {
-    "title": "Sveiki 👋 Esmu izstrādātājs",
-    "subtitle": "Specializējos {{ts}} un {{csharp}}. Veidoju tīmekļa lietotnes, API un saskarnes.",
-    "resume": "Lejupielādēt CV",
-    "contact": "Sazināties"
+    "welcome": "Laipni lūgti 👋",
+    "greeting": "Priecājos jūs redzēt manā portfolio!",
+    "slogan": "No idejām līdz strādājošam produktam.",
+    "description": "Esmu izstrādātājs, kas specializējas <1>TypeScript</1> un <3>C#</3>. Palīdzu uzņēmumiem un komandām veidot ātras, uzticamas un modernas tīmekļa lietotnes, API un skaistas saskarnes.",
+    "cta": {
+      "projects": "Skatīt projektus",
+      "about": "Uzzināt vairāk par mani",
+      "resume": "Lejupielādēt CV"
+    }
   }
 }
