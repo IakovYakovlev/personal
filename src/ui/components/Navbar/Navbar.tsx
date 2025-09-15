@@ -36,7 +36,7 @@ export const Navbar = () => {
       </Link>
 
       {/* Десктопное меню */}
-      <ul className='hidden md:flex gap-6'>
+      <ul className='hidden md:flex gap-6 ms-25'>
         {navbarLinks.map(({ to, labelKey }) => (
           <li key={to}>
             <NavLink
@@ -44,7 +44,7 @@ export const Navbar = () => {
               className={({ isActive }) =>
                 `transition-colors ${
                   isActive
-                    ? 'text-cyan-400'
+                    ? 'text-primary-light'
                     : theme === 'dark'
                       ? 'text-gray-300 hover:text-white'
                       : 'text-gray-700 hover:text-black'
@@ -82,7 +82,7 @@ export const Navbar = () => {
                   className={({ isActive }) =>
                     `transition-colors ${
                       isActive
-                        ? 'text-cyan-400'
+                        ? 'text-primary-light'
                         : theme === 'dark'
                           ? 'text-gray-300 hover:text-white'
                           : 'text-gray-700 hover:text-black'

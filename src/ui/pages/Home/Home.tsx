@@ -1,4 +1,4 @@
-import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans, useTranslation } from 'react-i18next';
@@ -6,14 +6,14 @@ import { Trans, useTranslation } from 'react-i18next';
 export const Home = () => {
   const { t } = useTranslation();
   return (
-    <section className='flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] px-6 text-center'>
+    <section className='flex flex-col items-center justify-center px-6 text-center flex-1'>
       <h1 className='text-4xl md:text-6xl font-bold mb-4 text-primary-light'>{t('home.welcome')}</h1>
 
-      <p className='text-xl md:text-2xl font-semibold text-gray-200 mb-2'>{t('home.greeting')}</p>
+      <p className='text-xl md:text-2xl font-semibold text-text-base mb-2'>{t('home.greeting')}</p>
 
-      <p className='italic text-gray-400 mb-6'>{t('home.slogan')}</p>
+      <p className='italic text-text-subtle mb-6'>{t('home.slogan')}</p>
 
-      <p className='text-lg md:text-xl text-gray-300 max-w-2xl'>
+      <p className='text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl'>
         <Trans i18nKey='home.description'>
           Я разработчик, специализирующийся на
           <span className='text-primary-light'>TypeScript</span> и <span className='text-primary-light'>C#</span>.
@@ -47,7 +47,7 @@ export const Home = () => {
           <FontAwesomeIcon icon={faFacebook} />
         </a>
         <a href='https://linkedin.com/in/your-profile' target='_blank'>
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faTelegram} />
         </a>
         <a href='https://t.me/your-profile' target='_blank'>
           <FontAwesomeIcon icon={faAddressCard} />

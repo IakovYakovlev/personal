@@ -21,7 +21,7 @@ export const LanguageSwitcher = () => {
             className={`px-3 py-1 rounded font-semibold transition-colors cursor-pointer
               ${
                 isActive
-                  ? 'bg-cyan-500 text-white'
+                  ? 'bg-primary text-white'
                   : theme === 'dark'
                     ? 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                     : 'bg-slate-200 text-gray-700 hover:bg-slate-300'

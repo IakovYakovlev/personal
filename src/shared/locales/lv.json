@@ -17,5 +17,15 @@
       "about": "Uzzināt vairāk par mani",
       "resume": "Lejupielādēt CV"
     }
+  },
+  "about": {
+    "title": "Par mani",
+    "intro": "Mans ceļš sākās loģistikā, kur ikdienā risināju reālus biznesa uzdevumus. Laika gaitā aizrāvos ar programmēšanu un padarīju to par galveno savas darba virzienu.",
+    "main": "No nelieliem rīkiem loģistikai izauga projekts — elektroniskā muitas noliktava, kas pēc ieviešanas samazināja izmaksas un palīdzēja uzņēmumam strādāt efektīvāk.",
+    "highlight": "Sistēma atviegloja darbinieku ikdienas darbu un vadībai deva procesu caurspīdību un analītiku ātrākiem un pārliecinošākiem lēmumiem.",
+    "conclusion": "Šodien es izstrādāju lietotnes un sistēmas, kas vienkāršo uzņēmumu darbu un veicina to izaugsmi. Mans mērķis ir pārvērst tehnoloģijas uzticamos un saprotamos rīkos, kas patiešām palīdz biznesam."
+  },
+  "footer": {
+    "tagline": "Veidoju uzticamus un ērtus risinājumus"
   }
 }

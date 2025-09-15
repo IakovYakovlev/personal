@@ -17,5 +17,15 @@
       "about": "Learn More About Me",
       "resume": "Download Resume"
     }
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "My journey began in logistics, where I dealt with real business challenges every day. Over time, I became passionate about development and made it the main focus of my work.",
+    "main": "From small tools for logistics grew a project — an electronic customs warehouse, which, once implemented, reduced costs and helped the company work more efficiently.",
+    "highlight": "The system made employees’ daily tasks easier and gave management process transparency and analytics for faster, more confident decisions.",
+    "conclusion": "Today I build applications and systems that simplify company workflows and support their growth. My goal is to turn technology into reliable and clear tools that truly help businesses."
+  },
+  "footer": {
+    "tagline": "Building reliable and user-friendly solutions"
   }
 }
