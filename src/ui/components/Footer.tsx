@@ -14,7 +14,7 @@ export const Footer = () => {
       </div>
 
       {/* Навигация */}
-      <ul className='flex gap-6 text-sm me-42'>
+      <ul className='flex gap-6 text-sm md:me-42'>
         <li>
           <a href='/about' className='hover:text-primary transition'>
             {t('nav.about')}

@@ -25,6 +25,66 @@
     "highlight": "Sistēma atviegloja darbinieku ikdienas darbu un vadībai deva procesu caurspīdību un analītiku ātrākiem un pārliecinošākiem lēmumiem.",
     "conclusion": "Šodien es izstrādāju lietotnes un sistēmas, kas vienkāršo uzņēmumu darbu un veicina to izaugsmi. Mans mērķis ir pārvērst tehnoloģijas uzticamos un saprotamos rīkos, kas patiešām palīdz biznesam."
   },
+  "skills": {
+    "title": "Prasmes",
+    "intro": "Izmantoju tehnoloģiju steku, kas palīdz risināt galvenos izstrādes uzdevumus: veidot ērtas lietotāja saskarnes, uzticamu servera daļu un efektīvas datubāzes.",
+    "categories": {
+      "frontend": {
+        "title": "Frontend",
+        "skills": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "MobX",
+          "HTML5",
+          "CSS3",
+          "TailwindCSS",
+          "Bootstrap",
+          "Node.js"
+        ]
+      },
+      "backend": {
+        "title": "Backend",
+        "skills": [
+          "C#",
+          "ASP.NET",
+          "Entity Framework",
+          "REST API",
+          "LINQ"
+        ]
+      },
+      "database": {
+        "title": "Datubāzes",
+        "skills": [
+          "SQL",
+          "SQL Server",
+          "MySQL",
+          "Database Design"
+        ]
+      },
+      "tools": {
+        "title": "Rīki un prakses",
+        "skills": [
+          "Git",
+          "GitHub",
+          "Visual Studio",
+          "VS Code",
+          "Postman",
+          "Figma"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakti",
+    "intro": "Būšu priecīgs apspriest projektus, idejas vai sadarbības iespējas. Ar mani var sazināties jebkurā ērtā veidā:",
+    "methods": {
+      "email": "E-pasts",
+      "github": "GitHub",
+      "telegram": "Telegram",
+      "facebook": "Facebook"
+    }
+  },
   "footer": {
     "tagline": "Veidoju uzticamus un ērtus risinājumus"
   }

@@ -25,6 +25,66 @@
     "highlight": "The system made employees’ daily tasks easier and gave management process transparency and analytics for faster, more confident decisions.",
     "conclusion": "Today I build applications and systems that simplify company workflows and support their growth. My goal is to turn technology into reliable and clear tools that truly help businesses."
   },
+  "skills": {
+    "title": "Skills",
+    "intro": "I use a technology stack that covers the key aspects of development: creating user-friendly interfaces, reliable server-side systems, and efficient databases.",
+    "categories": {
+      "frontend": {
+        "title": "Frontend",
+        "skills": [
+          "TypeScript",
+          "React",
+          "Vite",
+          "MobX",
+          "HTML5",
+          "CSS3",
+          "TailwindCSS",
+          "Bootstrap",
+          "Node.js"
+        ]
+      },
+      "backend": {
+        "title": "Backend",
+        "skills": [
+          "C#",
+          "ASP.NET",
+          "Entity Framework",
+          "REST API",
+          "LINQ"
+        ]
+      },
+      "database": {
+        "title": "Databases",
+        "skills": [
+          "SQL",
+          "SQL Server",
+          "MySQL",
+          "Database Design"
+        ]
+      },
+      "tools": {
+        "title": "Tools & Practices",
+        "skills": [
+          "Git",
+          "GitHub",
+          "Visual Studio",
+          "VS Code",
+          "Postman",
+          "Figma"
+        ]
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "I’ll be glad to discuss projects, ideas, or opportunities for collaboration. You can reach me in any convenient way:",
+    "methods": {
+      "email": "Email",
+      "github": "GitHub",
+      "telegram": "Telegram",
+      "facebook": "Facebook"
+    }
+  },
   "footer": {
     "tagline": "Building reliable and user-friendly solutions"
   }
