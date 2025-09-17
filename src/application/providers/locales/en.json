@@ -85,6 +85,28 @@
       "facebook": "Facebook"
     }
   },
+  "projects": {
+    "title": "Projects",
+    "intro": "For me, projects are not only about learning and finding solutions, but also about creating things that truly help people and businesses. This real value is what makes them important. Here are some of my projects:",
+    "list": [
+      {
+        "title": "Personal portfolio website",
+        "description": "A personal portfolio website with a responsive design and dark mode support, showcasing my skills and projects.",
+        "tech": [
+          "React",
+          "Redux",
+          "TypeScript",
+          "TailwindCSS",
+          "Vite"
+        ],
+        "links": {
+          "github": "https://github.com/IakovYakovlev/personal",
+          "demo": null
+        }
+      }
+    ],
+    "cta": "Want to discuss a project? Get in touch with me"
+  },
   "footer": {
     "tagline": "Building reliable and user-friendly solutions"
   }

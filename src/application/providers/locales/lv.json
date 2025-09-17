@@ -85,6 +85,28 @@
       "facebook": "Facebook"
     }
   },
+  "projects": {
+    "title": "Projekti",
+    "intro": "Projekti man ir ne tikai mācību process un risinājumu meklēšana, bet arī iespēja radīt lietas, kas patiešām palīdz cilvēkiem un uzņēmumiem. Tieši šī vērtība padara tos nozīmīgus. Šeit ir daži no maniem projektiem:",
+    "list": [
+      {
+        "title": "Personīgā portfolio vietne",
+        "description": "Personīgā portfolio vietne ar adaptīvu dizainu un tumšās tēmas atbalstu, kur apkopotas manas prasmes un projekti.",
+        "tech": [
+          "React",
+          "Redux",
+          "TypeScript",
+          "TailwindCSS",
+          "Vite"
+        ],
+        "links": {
+          "github": "https://github.com/IakovYakovlev/personal",
+          "demo": null
+        }
+      }
+    ],
+    "cta": "Vai vēlaties apspriest projektu? Sazinieties ar mani"
+  },
   "footer": {
     "tagline": "Veidoju uzticamus un ērtus risinājumus"
   }
