@@ -1,27 +1,27 @@
 import { lazy } from 'react';
 
 const Home = lazy(() =>
-  import('../ui/pages/Home/Home').then((module) => {
+  import('../../ui/pages/Home/Home').then((module) => {
     return { default: module.Home };
   }),
 );
 const About = lazy(() =>
-  import('../ui/pages/About/About').then((module) => {
+  import('../../ui/pages/About/About').then((module) => {
     return { default: module.About };
   }),
 );
 const Projects = lazy(() =>
-  import('../ui/pages/Projects/Projects').then((module) => {
+  import('../../ui/pages/Projects/Projects').then((module) => {
     return { default: module.Projects };
   }),
 );
 const Skills = lazy(() =>
-  import('../ui/pages/Skills/Skills').then((module) => {
+  import('../../ui/pages/Skills/Skills').then((module) => {
     return { default: module.Skills };
   }),
 );
 const Contact = lazy(() =>
-  import('../ui/pages/Contact/Contact').then((module) => {
+  import('../../ui/pages/Contact/Contact').then((module) => {
     return { default: module.Contact };
   }),
 );

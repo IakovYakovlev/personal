@@ -3,9 +3,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-import ru from './shared/locales/ru.json';
-import en from './shared/locales/en.json';
-import lv from './shared/locales/lv.json';
+import ru from './application/providers/locales/ru.json';
+import en from './application/providers/locales/en.json';
+import lv from './application/providers/locales/lv.json';
 
 i18n
   .use(LanguageDetector) // определяет язык браузера

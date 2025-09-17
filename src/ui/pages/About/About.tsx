@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import avatar from '../../../resurce/avatar.jpg';
+import avatar from '../../../assets/images/avatar.jpg';
 
 export const About = () => {
   const { t } = useTranslation();
