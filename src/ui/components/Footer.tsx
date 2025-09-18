@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faTelegram } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
@@ -16,7 +16,7 @@ export const Footer = () => {
       {/* Навигация */}
       <ul className='flex gap-6 text-sm md:me-42'>
         <li>
-          <a href='/about' className='hover:text-primary transition'>
+          <a href='/about' className='hover:text-primary transition whitespace-nowrap'>
             {t('nav.about')}
           </a>
         </li>
@@ -34,14 +34,14 @@ export const Footer = () => {
 
       {/* Соцсети */}
       <div className='flex gap-4 mt-4 md:mt-0 text-lg'>
-        <a href='https://github.com/your-profile' target='_blank' className='hover:text-primary'>
+        <a href={t('linksForContacts.github')} target='_blank' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href='https://linkedin.com/in/your-profile' target='_blank' className='hover:text-primary'>
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href='https://t.me/your-profile' target='_blank' className='hover:text-primary'>
+        <a href={t('linksForContacts.telegram')} target='_blank' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faTelegram} />
+        </a>
+        <a href={t('linksForContacts.facebook')} target='_blank' className='hover:text-primary-light'>
+          <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>
     </footer>

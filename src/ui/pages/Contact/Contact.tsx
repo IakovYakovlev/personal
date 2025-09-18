@@ -15,7 +15,7 @@ export const Contact = () => {
       <div className='flex flex-col md:flex-row gap-8 text-lg items-center justify-center'>
         <EmailContact />
         <a
-          href='https://github.com/IakovYakovlev'
+          href={t('linksForContacts.github')}
           target='_blank'
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
@@ -23,7 +23,7 @@ export const Contact = () => {
           <span>{t('contact.methods.github')}</span>
         </a>
         <a
-          href='https://t.me/JakovJakovlev'
+          href={t('linksForContacts.telegram')}
           target='_blank'
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
@@ -31,7 +31,7 @@ export const Contact = () => {
           <span>{t('contact.methods.telegram')}</span>
         </a>
         <a
-          href='https://www.facebook.com/profile.php?id=100057579385708'
+          href={t('linksForContacts.facebook')}
           target='_blank'
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >

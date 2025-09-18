@@ -39,8 +39,7 @@
           "HTML5",
           "CSS3",
           "TailwindCSS",
-          "Bootstrap",
-          "Node.js"
+          "Bootstrap"
         ]
       },
       "backend": {
@@ -50,7 +49,8 @@
           "ASP.NET",
           "Entity Framework",
           "REST API",
-          "LINQ"
+          "LINQ",
+          "Node.js"
         ]
       },
       "database": {
@@ -109,5 +109,10 @@
   },
   "footer": {
     "tagline": "Создаю надёжные и удобные решения"
+  },
+  "linksForContacts": {
+    "github": "https://github.com/IakovYakovlev",
+    "telegram": "https://t.me/JakovJakovlev",
+    "facebook": "https://www.facebook.com/profile.php?id=100057579385708"
   }
 }

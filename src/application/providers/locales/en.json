@@ -39,8 +39,7 @@
           "HTML5",
           "CSS3",
           "TailwindCSS",
-          "Bootstrap",
-          "Node.js"
+          "Bootstrap"
         ]
       },
       "backend": {
@@ -50,7 +49,8 @@
           "ASP.NET",
           "Entity Framework",
           "REST API",
-          "LINQ"
+          "LINQ",
+          "Node.js"
         ]
       },
       "database": {

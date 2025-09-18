@@ -1,5 +1,4 @@
-import { faFacebook, faTelegram } from '@fortawesome/free-brands-svg-icons';
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans, useTranslation } from 'react-i18next';
 
@@ -42,15 +41,15 @@ export const Home = () => {
       </div>
 
       {/* 🎯 иконки соцсетей */}
-      <div className='flex gap-6 mt-10 text-2xl text-gray-400 hover:text-primary-light transition'>
-        <a href='https://github.com/your-profile' target='_blank'>
-          <FontAwesomeIcon icon={faFacebook} />
+      <div className='flex gap-6 mt-10 text-2xl text-gray-400 transition'>
+        <a href={t('linksForContacts.github')} target='_blank' className='hover:text-primary-light'>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href='https://linkedin.com/in/your-profile' target='_blank'>
+        <a href={t('linksForContacts.telegram')} target='_blank' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faTelegram} />
         </a>
-        <a href='https://t.me/your-profile' target='_blank'>
-          <FontAwesomeIcon icon={faAddressCard} />
+        <a href={t('linksForContacts.facebook')} target='_blank' className='hover:text-primary-light'>
+          <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>
     </section>
