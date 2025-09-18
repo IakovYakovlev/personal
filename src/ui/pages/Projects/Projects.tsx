@@ -75,7 +75,7 @@ export const Projects = () => {
       <div className='mt-12'>
         <Link
           to='/contact'
-          className='px-6 py-3 rounded bg-primary text-white font-semibold hover:bg-primary-light transition'
+          className='inline-block text-center px-6 py-3 sm:px-6 sm:py-3 px-4 py-2 rounded bg-primary text-white font-semibold hover:bg-primary-light transition text-sm sm:text-base'
         >
           {t('projects.cta')}
         </Link>
