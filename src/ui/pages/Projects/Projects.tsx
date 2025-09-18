@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 export const Projects = () => {
   const { t } = useTranslation();
@@ -72,12 +73,12 @@ export const Projects = () => {
 
       {/* CTA */}
       <div className='mt-12'>
-        <a
-          href='/contact'
+        <Link
+          to='/contact'
           className='px-6 py-3 rounded bg-primary text-white font-semibold hover:bg-primary-light transition'
         >
           {t('projects.cta')}
-        </a>
+        </Link>
       </div>
     </section>
   );

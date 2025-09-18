@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './application/router';
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';
@@ -9,10 +9,11 @@ import { Layout } from './ui/components/Layout';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Suspense>
           <Background />
           <Routes>
+            {/* Родительский маршрут с Layout */}
             <Route element={<Layout />}>
               {publicRoutes.map((route) => (
                 <Route key={route.path} path={route.path} element={<route.component />} />
@@ -20,7 +21,7 @@ function App() {
             </Route>
           </Routes>
         </Suspense>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }

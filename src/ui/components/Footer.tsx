@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -16,19 +17,19 @@ export const Footer = () => {
       {/* Навигация */}
       <ul className='flex gap-6 text-sm md:me-42'>
         <li>
-          <a href='/about' className='hover:text-primary transition whitespace-nowrap'>
+          <Link to='/about' className='hover:text-primary transition whitespace-nowrap'>
             {t('nav.about')}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='/projects' className='hover:text-primary transition'>
+          <Link to='/projects' className='hover:text-primary transition'>
             {t('nav.projects')}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='/contact' className='hover:text-primary transition'>
+          <Link to='/contact' className='hover:text-primary transition'>
             {t('nav.contact')}
-          </a>
+          </Link>
         </li>
       </ul>
 

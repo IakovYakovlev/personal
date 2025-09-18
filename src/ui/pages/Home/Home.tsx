@@ -1,6 +1,7 @@
 import { faFacebook, faGithub, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans, useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const { t } = useTranslation();
@@ -20,18 +21,18 @@ export const Home = () => {
       </p>
 
       <div className='mt-8 flex gap-4 flex-wrap justify-center'>
-        <a
-          href='/projects'
+        <Link
+          to='/projects'
           className='px-6 py-3 rounded bg-primary text-white font-semibold hover:bg-primary-light transition'
         >
           {t('home.cta.projects')}
-        </a>
-        <a
-          href='/about'
+        </Link>
+        <Link
+          to='/about'
           className='px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition'
         >
           {t('home.cta.about')}
-        </a>
+        </Link>
         <a
           href='/resume.pdf'
           className='px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition'
