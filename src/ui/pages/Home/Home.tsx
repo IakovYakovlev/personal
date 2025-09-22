@@ -43,13 +43,13 @@ export const Home = () => {
 
       {/* 🎯 иконки соцсетей */}
       <div className='flex gap-6 mt-10 text-2xl text-gray-400 transition'>
-        <a href={t('linksForContacts.github')} target='_blank' className='hover:text-primary-light'>
+        <a href={t('linksForContacts.github')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href={t('linksForContacts.telegram')} target='_blank' className='hover:text-primary-light'>
+        <a href={t('linksForContacts.telegram')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faTelegram} />
         </a>
-        <a href={t('linksForContacts.facebook')} target='_blank' className='hover:text-primary-light'>
+        <a href={t('linksForContacts.facebook')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>

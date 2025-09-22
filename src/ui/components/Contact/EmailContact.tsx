@@ -17,7 +17,7 @@ export const EmailContact = () => {
       <FontAwesomeIcon icon={faEnvelope} className='w-6 h-6' />
 
       <span className='ms-3'>{email}</span>
-      <button onClick={copyToClipboard} className='ms-1 text-xs rounded hover:text-primary transitio cursor-pointer'>
+      <button onClick={copyToClipboard} className='ms-1 text-xs rounded hover:text-primary transition cursor-pointer'>
         <FontAwesomeIcon icon={copied ? faCheck : faCopy} className='w-4 h-4' />
       </button>
     </div>

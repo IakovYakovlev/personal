@@ -17,6 +17,7 @@ export const Contact = () => {
         <a
           href={t('linksForContacts.github')}
           target='_blank'
+          rel="noopener noreferrer"
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
           <FontAwesomeIcon icon={faGithub} />
@@ -25,6 +26,7 @@ export const Contact = () => {
         <a
           href={t('linksForContacts.telegram')}
           target='_blank'
+          rel="noopener noreferrer"
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
           <FontAwesomeIcon icon={faTelegram} />
@@ -33,6 +35,7 @@ export const Contact = () => {
         <a
           href={t('linksForContacts.facebook')}
           target='_blank'
+          rel="noopener noreferrer"
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
           <FontAwesomeIcon icon={faFacebook} />

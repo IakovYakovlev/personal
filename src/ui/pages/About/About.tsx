@@ -8,7 +8,7 @@ export const About = () => {
       <img
         src={avatar}
         alt='My photo'
-        className='w-45 h-45 rounded-full mb-6 shadow-lg border-4 border-primary object-cover'
+        className='w-[180px] h-[180px] rounded-full mb-6 shadow-lg border-4 border-primary object-cover'
       />
       <h1 className='text-4xl md:text-6xl font-bold mb-8 text-primary'>{t('about.title')}</h1>
       <p className='text-lg md:text-xl text-text-base max-w-4xl mb-6'>{t('about.intro')}</p>

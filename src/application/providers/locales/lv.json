@@ -109,5 +109,10 @@
   },
   "footer": {
     "tagline": "Veidoju uzticamus un ērtus risinājumus"
+  },
+  "linksForContacts": {
+    "github": "https://github.com/IakovYakovlev",
+    "telegram": "https://t.me/JakovJakovlev",
+    "facebook": "https://www.facebook.com/profile.php?id=100057579385708"
   }
 }

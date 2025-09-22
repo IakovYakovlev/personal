@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
@@ -62,7 +62,7 @@ export const Projects = () => {
                   rel='noopener noreferrer'
                   className='flex items-center gap-2 text-primary hover:text-primary-light transition'
                 >
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   <span>Demo</span>
                 </a>
               )}
