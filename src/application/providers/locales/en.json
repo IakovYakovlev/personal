@@ -23,7 +23,7 @@
     "intro": "My journey began in logistics, where I dealt with real business challenges every day. Over time, I became passionate about development and made it the main focus of my work.",
     "main": "From small tools for logistics grew a project — an electronic customs warehouse, which, once implemented, reduced costs and helped the company work more efficiently.",
     "highlight": "The system made employees’ daily tasks easier and gave management process transparency and analytics for faster, more confident decisions.",
-    "conclusion": "Today I build applications and systems that simplify company workflows and support their growth. My goal is to turn technology into reliable and clear tools that truly help businesses."
+    "conclusion": "Today I create applications and systems that simplify company workflows and support their growth. My main focus is developing in frontend (React/TypeScript), but my experience with backend (C#/.NET) helps me understand the overall project architecture and design more reliable solutions. My goal is to turn technology into reliable and understandable tools that truly help businesses."
   },
   "skills": {
     "title": "Skills",
@@ -38,8 +38,7 @@
           "MobX",
           "HTML5",
           "CSS3",
-          "TailwindCSS",
-          "Bootstrap"
+          "TailwindCSS"
         ]
       },
       "backend": {
@@ -103,6 +102,22 @@
           "github": "https://github.com/IakovYakovlev/personal",
           "demo": null
         }
+      },
+      {
+        "title": "Customs Warehouse System",
+        "description": "Enterprise system for pallet and cell management, receiving/shipping, barcode scanning, and reporting. Integrated with declarants and accounting.",
+        "tech": [
+          "React",
+          "TypeScript",
+          "MobX",
+          "C#",
+          ".NET",
+          "REST API"
+        ],
+        "links": {
+          "github": null,
+          "demo": null
+        }
       }
     ],
     "cta": "Want to discuss a project? Get in touch with me"
@@ -110,7 +125,8 @@
   "footer": {
     "tagline": "Building reliable and user-friendly solutions"
   },
-  "linksForContacts": {
+  "links": {
+    "resume": "/resume/Resume_Iakov_Yakovlev_EN_2025.pdf",
     "github": "https://github.com/IakovYakovlev",
     "telegram": "https://t.me/JakovJakovlev",
     "facebook": "https://www.facebook.com/profile.php?id=100057579385708"

@@ -35,13 +35,13 @@ export const Footer = () => {
 
       {/* Соцсети */}
       <div className='flex gap-4 mt-4 md:mt-0 text-lg'>
-        <a href={t('linksForContacts.github')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
+        <a href={t('links.github')} target='_blank' rel='noopener noreferrer' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href={t('linksForContacts.telegram')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
+        <a href={t('links.telegram')} target='_blank' rel='noopener noreferrer' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faTelegram} />
         </a>
-        <a href={t('linksForContacts.facebook')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
+        <a href={t('links.facebook')} target='_blank' rel='noopener noreferrer' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>

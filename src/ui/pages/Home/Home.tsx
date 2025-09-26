@@ -2,6 +2,7 @@ import { faFacebook, faGithub, faTelegram } from '@fortawesome/free-brands-svg-i
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Trans, useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import i18n from '../../../i18n';
 
 export const Home = () => {
   const { t } = useTranslation();
@@ -34,7 +35,8 @@ export const Home = () => {
           {t('home.cta.about')}
         </Link>
         <a
-          href='/resume.pdf'
+          href={t('links.resume')}
+          download={`Iakov_Yakovlev_${i18n.language.toUpperCase()}.pdf`}
           className='px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition'
         >
           {t('home.cta.resume')}
@@ -43,13 +45,13 @@ export const Home = () => {
 
       {/* 🎯 иконки соцсетей */}
       <div className='flex gap-6 mt-10 text-2xl text-gray-400 transition'>
-        <a href={t('linksForContacts.github')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
+        <a href={t('links.github')} target='_blank' rel='noopener noreferrer' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href={t('linksForContacts.telegram')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
+        <a href={t('links.telegram')} target='_blank' rel='noopener noreferrer' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faTelegram} />
         </a>
-        <a href={t('linksForContacts.facebook')} target='_blank' rel="noopener noreferrer" className='hover:text-primary-light'>
+        <a href={t('links.facebook')} target='_blank' rel='noopener noreferrer' className='hover:text-primary-light'>
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>

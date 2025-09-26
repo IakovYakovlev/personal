@@ -15,27 +15,27 @@ export const Contact = () => {
       <div className='flex flex-col md:flex-row gap-8 text-lg items-center justify-center'>
         <EmailContact />
         <a
-          href={t('linksForContacts.github')}
+          href={t('links.github')}
           target='_blank'
-          rel="noopener noreferrer"
+          rel='noopener noreferrer'
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
           <FontAwesomeIcon icon={faGithub} />
           <span>{t('contact.methods.github')}</span>
         </a>
         <a
-          href={t('linksForContacts.telegram')}
+          href={t('links.telegram')}
           target='_blank'
-          rel="noopener noreferrer"
+          rel='noopener noreferrer'
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
           <FontAwesomeIcon icon={faTelegram} />
           <span>{t('contact.methods.telegram')}</span>
         </a>
         <a
-          href={t('linksForContacts.facebook')}
+          href={t('links.facebook')}
           target='_blank'
-          rel="noopener noreferrer"
+          rel='noopener noreferrer'
           className='flex items-center gap-3 text-text-subtle hover:text-primary transition'
         >
           <FontAwesomeIcon icon={faFacebook} />

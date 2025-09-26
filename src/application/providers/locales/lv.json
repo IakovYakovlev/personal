@@ -23,7 +23,7 @@
     "intro": "Mans ceļš sākās loģistikā, kur ikdienā risināju reālus biznesa uzdevumus. Laika gaitā aizrāvos ar programmēšanu un padarīju to par galveno savas darba virzienu.",
     "main": "No nelieliem rīkiem loģistikai izauga projekts — elektroniskā muitas noliktava, kas pēc ieviešanas samazināja izmaksas un palīdzēja uzņēmumam strādāt efektīvāk.",
     "highlight": "Sistēma atviegloja darbinieku ikdienas darbu un vadībai deva procesu caurspīdību un analītiku ātrākiem un pārliecinošākiem lēmumiem.",
-    "conclusion": "Šodien es izstrādāju lietotnes un sistēmas, kas vienkāršo uzņēmumu darbu un veicina to izaugsmi. Mans mērķis ir pārvērst tehnoloģijas uzticamos un saprotamos rīkos, kas patiešām palīdz biznesam."
+    "conclusion": "Šodien es veidoju lietotnes un sistēmas, kas atvieglo uzņēmumu darbu un veicina to izaugsmi. Mans galvenais fokuss ir attīstība frontend jomā (React/TypeScript), bet pieredze backend izstrādē (C#/.NET) palīdz man izprast projekta arhitektūru kopumā un veidot uzticamākus risinājumus. Mans mērķis ir pārvērst tehnoloģijas uzticamos un saprotamos rīkos, kas patiesi palīdz biznesam."
   },
   "skills": {
     "title": "Prasmes",
@@ -38,8 +38,7 @@
           "MobX",
           "HTML5",
           "CSS3",
-          "TailwindCSS",
-          "Bootstrap"
+          "TailwindCSS"
         ]
       },
       "backend": {
@@ -103,6 +102,22 @@
           "github": "https://github.com/IakovYakovlev/personal",
           "demo": null
         }
+      },
+      {
+        "title": "Muitas noliktavas sistēma",
+        "description": "Uzņēmuma līmeņa sistēma paliktņu un šūnu uzskaitei, preču pieņemšanai/izsniegšanai, svītrkodu skenēšanai un atskaitēm. Sinhronizēta ar deklarantiem un grāmatvedību.",
+        "tech": [
+          "React",
+          "TypeScript",
+          "MobX",
+          "C#",
+          ".NET",
+          "REST API"
+        ],
+        "links": {
+          "github": null,
+          "demo": null
+        }
       }
     ],
     "cta": "Vai vēlaties apspriest projektu? Sazinieties ar mani"
@@ -110,7 +125,8 @@
   "footer": {
     "tagline": "Veidoju uzticamus un ērtus risinājumus"
   },
-  "linksForContacts": {
+  "links": {
+    "resume": "/resume/Resume_Iakov_Yakovlev_LV_2025.pdf",
     "github": "https://github.com/IakovYakovlev",
     "telegram": "https://t.me/JakovJakovlev",
     "facebook": "https://www.facebook.com/profile.php?id=100057579385708"

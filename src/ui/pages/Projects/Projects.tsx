@@ -26,7 +26,10 @@ export const Projects = () => {
       {/* Список проектов */}
       <div className='flex flex-wrap justify-center gap-8 max-w-5xl w-full'>
         {projects.map((project, index) => (
-          <div key={index} className='bg-bg-muted dark:bg-bg-alt p-6 rounded-lg shadow-md text-left w-full max-w-md'>
+          <div
+            key={index}
+            className='flex flex-col bg-bg-muted dark:bg-bg-alt p-6 rounded-lg shadow-md text-left w-full max-w-md'
+          >
             {/* Заголовок */}
             <h2 className='text-2xl font-semibold text-primary mb-3'>{project.title}</h2>
 
@@ -34,7 +37,7 @@ export const Projects = () => {
             <p className='text-text-base mb-4'>{project.description}</p>
 
             {/* Технологии */}
-            <div className='flex flex-wrap gap-2 mb-4'>
+            <div className='flex flex-wrap gap-2 mb-4 mt-auto'>
               {project.tech.map((tech) => (
                 <span key={tech} className='px-3 py-1 text-sm rounded bg-bg-base text-text-subtle border border-bg-alt'>
                   {tech}
