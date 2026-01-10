@@ -89,6 +89,22 @@
     "intro": "Projekti man ir ne tikai mācību process un risinājumu meklēšana, bet arī iespēja radīt lietas, kas patiešām palīdz cilvēkiem un uzņēmumiem. Tieši šī vērtība padara tos nozīmīgus. Šeit ir daži no maniem projektiem:",
     "list": [
       {
+        "title": "DocSense AI (MVP)",
+        "description": "Inteliģenta dokumentu analīzes sistēma. Izstrādāta ar modulāru arhitektūru, izmanto AI datu apstrādei un Redis augstas veiktspējas kešatmiņai.",
+        "tech": [
+          "NestJS",
+          "TypeScript",
+          "OpenAI API",
+          "Redis",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "links": {
+          "github": "https://github.com/IakovYakovlev/NestJSDocSensePublic.git",
+          "demo": null
+        }
+      },
+      {
         "title": "Personīgā portfolio vietne",
         "description": "Personīgā portfolio vietne ar adaptīvu dizainu un tumšās tēmas atbalstu, kur apkopotas manas prasmes un projekti.",
         "tech": [
