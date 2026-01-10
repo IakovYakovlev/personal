@@ -94,7 +94,7 @@
         "tech": [
           "NestJS",
           "TypeScript",
-          "OpenAI API",
+          "Google Gemini AI",
           "Redis",
           "PostgreSQL",
           "Docker"
