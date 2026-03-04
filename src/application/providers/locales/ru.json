@@ -89,6 +89,24 @@
     "intro": "Проекты для меня — это не только учебный процесс и поиск решений, но и возможность создавать вещи, которые действительно помогают людям и бизнесу. Именно эта польза делает их ценными. Вот некоторые из моих проектов:",
     "list": [
       {
+        "title": "Personal Ops Center",
+        "description": "Fullstack микросервисная платформа с Next.js dashboard и двумя рабочими сервисами: Identity Service (JWT-авторизация) и Doc Intelligence (асинхронная AI-обработка документов). Используется безопасный BFF-подход через route handlers и httpOnly cookie. Проект развернут в публичном доступе на Railway.",
+        "tech": [
+          "Next.js",
+          "NestJS",
+          "TypeScript",
+          "TanStack Query",
+          "JWT",
+          "Redis",
+          "PostgreSQL",
+          "Railway"
+        ],
+        "links": {
+          "github": "https://github.com/IakovYakovlev/personal-ops-center.git",
+          "demo": "https://personal-ops-center-production-f20d.up.railway.app/"
+        }
+      },
+      {
         "title": "DocSense AI (MVP)",
         "description": "Интеллектуальная система анализа документов. Построена на модульной архитектуре, использует AI для извлечения данных и Redis для высокопроизводительного кеширования.",
         "tech": [
