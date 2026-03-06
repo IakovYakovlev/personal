@@ -107,6 +107,23 @@
         }
       },
       {
+        "title": "DocSense API (.NET)",
+        "description": "Backend API inteliģentai dokumentu apstrādei un ar AI balstītai analīzei. Izstrādāts ar ASP.NET Core un EF Core; ietver failu augšupielādi, fona uzdevumu apstrādi, lietošanas limitus un Swagger dokumentāciju ērtai integrācijai un testēšanai.",
+        "tech": [
+          "C#",
+          "ASP.NET Core",
+          "Entity Framework Core",
+          "PostgreSQL",
+          "Docker",
+          "Swagger/OpenAPI",
+          "xUnit"
+        ],
+        "links": {
+          "github": "https://github.com/IakovYakovlev/DocSensePublic.git",
+          "demo": null
+        }
+      },
+      {
         "title": "DocSense AI (MVP)",
         "description": "Inteliģenta dokumentu analīzes sistēma. Izstrādāta ar modulāru arhitektūru, izmanto AI datu apstrādei un Redis augstas veiktspējas kešatmiņai.",
         "tech": [

@@ -107,6 +107,23 @@
         }
       },
       {
+        "title": "DocSense API (.NET)",
+        "description": "Backend API для интеллектуальной обработки документов и AI-анализа. Построен на ASP.NET Core и EF Core; включает загрузку файлов, обработку фоновых задач, лимиты использования и Swagger-документацию для удобной интеграции и тестирования.",
+        "tech": [
+          "C#",
+          "ASP.NET Core",
+          "Entity Framework Core",
+          "PostgreSQL",
+          "Docker",
+          "Swagger/OpenAPI",
+          "xUnit"
+        ],
+        "links": {
+          "github": "https://github.com/IakovYakovlev/DocSensePublic.git",
+          "demo": null
+        }
+      },
+      {
         "title": "DocSense AI (MVP)",
         "description": "Интеллектуальная система анализа документов. Построена на модульной архитектуре, использует AI для извлечения данных и Redis для высокопроизводительного кеширования.",
         "tech": [
