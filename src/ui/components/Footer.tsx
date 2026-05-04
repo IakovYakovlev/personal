@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   const { t } = useTranslation();
+  const year = new Date().getFullYear();
 
   return (
     <footer className='w-full py-6 px-8 md:px-20 flex flex-col md:flex-row items-center justify-between bg-bg-alt text-text-muted'>
       {/* Левая часть */}
       <div className='mb-4 md:mb-0 text-center md:text-left'>
-        <p className='font-semibold text-text-base'>© 2025 Jakov</p>
+        <p className='font-semibold text-text-base'>© {year} Jakov</p>
         <p className='text-sm'>{t('footer.tagline', 'Создаю надёжные и удобные решения')}</p>
       </div>
 
