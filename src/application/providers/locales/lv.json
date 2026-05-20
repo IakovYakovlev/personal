@@ -103,7 +103,7 @@
         ],
         "links": {
           "github": "https://github.com/IakovYakovlev/personal-ops-center.git",
-          "demo": "https://personal-ops-center-production-f20d.up.railway.app/"
+          "demo": null
         }
       },
       {
