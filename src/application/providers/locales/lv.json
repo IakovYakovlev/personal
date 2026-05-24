@@ -20,10 +20,10 @@
   },
   "about": {
     "title": "Par mani",
-    "intro": "Mans ceļš sākās loģistikā, kur ikdienā risināju reālus biznesa uzdevumus. Laika gaitā aizrāvos ar programmēšanu un padarīju to par galveno savas darba virzienu.",
-    "main": "No nelieliem rīkiem loģistikai izauga projekts — elektroniskā muitas noliktava, kas pēc ieviešanas samazināja izmaksas un palīdzēja uzņēmumam strādāt efektīvāk.",
-    "highlight": "Sistēma atviegloja darbinieku ikdienas darbu un vadībai deva procesu caurspīdību un analītiku ātrākiem un pārliecinošākiem lēmumiem.",
-    "conclusion": "Šodien es veidoju lietotnes un sistēmas, kas atvieglo uzņēmumu darbu un veicina to izaugsmi. Mans galvenais fokuss — radīt mūsdienīgus risinājumus, kas apvieno dizainu, programmēšanu un mākslīgo intelektu."
+    "intro": "Sveiki! Esmu Fullstack izstrādātājs (C# / React / Node.js) ar specializāciju mākslīgā intelekta (AI) integrācijā un viedo tīmekļa lietotņu izstrādē. Mans galvenais fokuss ir mūsdienīgu AI risinājumu radīšana, kas automatizē darbu ar datiem, vienkāršo procesus un veicina biznesa izaugsmi.",
+    "main": "Mans ceļš ir unikāls ar to, ka ienācu IT no reālā sektora. Strādājot loģistikā, es izstrādāju un ieviesu 'Elektroniskās muitas noliktavas' sistēmu. Šis projekts ļāva automatizēt ikdienas rutīnu un optimizēt operāciju nodaļas štatu par 50%, kā arī nodrošināja 100% rēķinu izrakstīšanas kontroli un pārskatāmību, pilnībā novēršot uzņēmuma negūtos ieņēmumus.",
+    "highlight": "Pašlaik es mērogoju šo pieredzi, ieviešot AI dokumentu atpazīšanai. Mans risinājums automātiski atlasa datus no skenētiem dokumentiem un rēķiniem, kas saņemti e-pastā. Tas pilnībā atbrīvo darbiniekus no manuālas datu ievades, kam iepriekš tika tērēta vesela darba nedēļa katru mēnesi.",
+    "conclusion": "Šodien es apvienoju produktu dizainu, uzticamu servera arhitektūru un AI iespējas, lai radītu produktus, kas patiešām sniedz vērtību. Mana pieredze loģistikā palīdz man dziļāk izprast biznesa problēmas un runāt ar pasūtītājiem vienā valodā."
   },
   "skills": {
     "title": "Prasmes",

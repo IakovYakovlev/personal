@@ -20,10 +20,10 @@
   },
   "about": {
     "title": "About Me",
-    "intro": "My journey began in logistics, where I dealt with real business challenges every day. Over time, I became passionate about development and made it the main focus of my work.",
-    "main": "From small tools for logistics grew a project — an electronic customs warehouse, which, once implemented, reduced costs and helped the company work more efficiently.",
-    "highlight": "The system made employees’ daily tasks easier and gave management process transparency and analytics for faster, more confident decisions.",
-    "conclusion": "Today I create applications and systems that simplify company workflows and support their growth. My main focus is to build modern solutions at the intersection of design, programming, and artificial intelligence."
+    "intro": "Hi! I am a Fullstack Developer (C# / React / Node.js) specializing in AI integration and intelligent web applications. My primary focus is building modern AI-driven solutions that automate data workflows, streamline operations, and drive business growth.",
+    "main": "My journey is unique because I transitioned into IT from the real sector. While working in logistics, I designed and implemented an 'Electronic Customs Warehouse' system. The project automated routine tasks, optimized the operations department headcount by 50%, and ensured 100% billing control and transparency, completely eliminating missed revenue.",
+    "highlight": "Right now, I am scaling this experience by integrating AI for document recognition. My solution automatically extracts data from scans and invoices received via email. This completely frees employees from manual data entry, which previously consumed an entire week of working time every month.",
+    "conclusion": "Today, I combine product design, robust backend architecture, and AI capabilities to build products that truly deliver value. My background in logistics helps me deeply understand business pain points and speak the same language as stakeholders."
   },
   "skills": {
     "title": "Skills",
