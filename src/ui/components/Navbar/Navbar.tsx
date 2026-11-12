@@ -1,16 +1,13 @@
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Link, NavLink } from 'react-router-dom';
-import type { RootState } from '../../../application/store';
 import { LanguageSwitcher } from '../LanguageSwitcher';
 import { ThemeSwitcher } from '../ThemeSwitcher';
 import { navbarLinks } from './navbarLinks';
 
 export const Navbar = () => {
-  const theme = useSelector((state: RootState) => state.theme.theme);
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
