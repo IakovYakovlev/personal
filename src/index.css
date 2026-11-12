@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  /* Настройка семейств шрифтов */
+  --font-sans: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Палитра */
   --color-primary: #78350f; /* amber-900 / bronze → спокойный благородный акцент */
   --color-primary-light: #b45309; /* amber-700 */
   --color-primary-dark: #451a03; /* amber-950 */
 
-  --color-text-base: #1c1917; /* stone-900 */
-  --color-text-muted: #44403c; /* stone-700 */
+  --color-text-base: #292524; /* stone-800 вместо stone-900 → мягче, убирает сухую черноту */
+  --color-text-muted: #57534e; /* stone-600 */
   --color-text-subtle: #78716c; /* stone-500 */
   --color-bg-base: #fcfbf9; /* теплый молочно-белый */
   --color-bg-muted: #f5f4f0; /* легкий теплый серый */
@@ -23,4 +29,11 @@
   --color-text-subtle: #a8a29e; /* stone-400 */
   --color-bg-base: #121110; /* глубокий угольный */
   --color-bg-muted: #1c1917; /* stone-900 */
+}
+
+/* Базовые стили для тела документа, чтобы шрифт применился глобально */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-base);
 }

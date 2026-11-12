@@ -6,13 +6,12 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    /* Уменьшили py-12 md:py-20 до py-6 md:py-10, чтобы уместиться в 100vh */
     <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-6 md:py-10 text-left'>
       <main className='w-full'>
-        {/* Главный заголовок и роль (mb-12 заменен на mb-8) */}
+        {/* Главный заголовок с локализацией и идеальным размером */}
         <div className='max-w-3xl mb-8'>
-          <h1 className='text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--color-text-base)] tracking-tight leading-tight mb-3'>
-            {t('home.role', 'Fullstack Developer')}
+          <h1 className='text-3xl md:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-3'>
+            {t('home.role', 'Разработка надежных веб-приложений')}
           </h1>
 
           {/* Строка стека с акцентным цветом */}
@@ -57,7 +56,7 @@ export const Home = () => {
           </div>
         </div>
 
-        {/* Разделитель (my-12 заменен на my-6 md:my-8) */}
+        {/* Разделитель */}
         <hr className='border-[var(--color-text-subtle)]/15 my-6 md:my-8' />
 
         {/* Информационные блоки */}
