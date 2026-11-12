@@ -3,10 +3,7 @@ import { useTranslation } from 'react-i18next';
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
-  // Оставляем только 2 языка
   const languages = ['ru', 'en'] as const;
-
-  // Определение текущего активного языка
   const currentLang = i18n.language.startsWith('en') ? 'en' : 'ru';
 
   const changeLanguage = (lng: string) => {
@@ -16,7 +13,7 @@ export const LanguageSwitcher = () => {
   };
 
   return (
-    <div className='inline-flex items-center p-0.5 rounded-lg bg-[var(--color-bg-muted)] border border-[var(--color-text-subtle)]/20 font-mono text-xs'>
+    <div className='inline-flex items-center font-mono text-xs'>
       {languages.map((lng) => {
         const isActive = currentLang === lng;
         return (

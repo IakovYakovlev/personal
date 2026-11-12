@@ -1,13 +1,13 @@
-import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
-import { type RootState, type AppDispatch } from '../../application/store';
-import { toggleTheme } from '../../application/store/themeSlice';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import { useEffect } from 'react';
+import type { RootState, AppDispatch } from '../../application/store';
+import { toggleTheme } from '../../application/store/themeSlice';
 
-export function ThemeSwitcher() {
-  const theme = useSelector((state: RootState) => state.theme.theme);
+export const ThemeSwitcher = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const theme = useSelector((state: RootState) => state.theme.theme);
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -18,11 +18,13 @@ export function ThemeSwitcher() {
   }, [theme]);
 
   return (
-    <FontAwesomeIcon
-      icon={faCircleHalfStroke}
+    <button
+      type='button'
       onClick={() => dispatch(toggleTheme())}
-      className={`rounded font-bold z-50 cursor-pointer px-2 py-2
-        ${theme === 'dark' ? 'text-white' : 'text-slate-900'}`}
-    />
+      aria-label='Toggle theme'
+      className='flex items-center justify-center px-2.5 py-1 rounded-md text-[var(--color-text-subtle)] hover:text-[var(--color-text-base)] transition-all duration-200 cursor-pointer'
+    >
+      <FontAwesomeIcon icon={faCircleHalfStroke} size='sm' />
+    </button>
   );
-}
+};

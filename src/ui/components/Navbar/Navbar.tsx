@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
@@ -26,76 +26,124 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-20 py-4 backdrop-blur-md z-50 transition-colors border-b border-[var(--color-text-subtle)]/10
-        ${theme === 'dark' ? 'bg-[var(--color-bg-base)]/80 text-[var(--color-text-base)]' : 'bg-[var(--color-bg-base)]/80 text-[var(--color-text-base)]'}`}
-    >
-      {/* Логотип */}
-      <Link to='/' className='font-bold text-xl text-[var(--color-primary)]'>
-        {t('nav.brand')}
-      </Link>
+    <header className='fixed top-4 left-0 w-full z-50 px-4 md:px-12 flex justify-center'>
+      {/* Сверхкомпактный плавающий островок */}
+      <nav className='w-full max-w-sm md:max-w-xl lg:max-w-4xl bg-[var(--color-bg-base)]/65 backdrop-blur-xl px-4 md:px-6 py-2.5 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.3)] flex justify-between items-center transition-all duration-300'>
+        {/* Логотип / Бренд */}
+        <Link
+          to='/'
+          className='font-mono font-bold text-base md:text-lg text-[var(--color-text-base)] flex items-center gap-1.5 group whitespace-nowrap'
+        >
+          <span className='text-[var(--color-primary)] font-extrabold'>~/</span>
+          <span className='group-hover:text-[var(--color-primary)] transition-colors'>
+            {t('nav.brand', 'Iakov.dev')}
+          </span>
+        </Link>
 
-      {/* Десктопное меню */}
-      <ul className='hidden md:flex gap-6 ms-25'>
-        {navbarLinks.map(({ to, labelKey }) => (
-          <li key={to}>
-            <NavLink
-              to={to}
-              className={({ isActive }) =>
-                `transition-colors font-medium ${
-                  isActive
-                    ? 'text-[var(--color-primary)]'
-                    : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-base)]'
-                }`
-              }
-            >
-              {t(labelKey)}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-
-      {/* Переключатели (десктоп) */}
-      <div className='hidden md:flex items-center gap-4'>
-        <LanguageSwitcher />
-        <ThemeSwitcher />
-      </div>
-
-      {/* Бургер-кнопка (мобильная версия) */}
-      <button className='md:hidden z-50 me-7 mt-1 text-[var(--color-text-base)]' onClick={() => setIsOpen(!isOpen)}>
-        <FontAwesomeIcon icon={isOpen ? faXmark : faBars} size='lg' />
-      </button>
-
-      {/* Мобильное меню */}
-      {isOpen && (
-        <div className='absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-8 text-xl bg-[var(--color-bg-base)] text-[var(--color-text-base)]'>
-          <ul className='flex flex-col gap-6 text-center'>
+        {/* Десктопное меню с точкой-индикатором статуса */}
+        <div className='hidden lg:flex items-center gap-5'>
+          <ul className='flex items-center gap-5'>
             {navbarLinks.map(({ to, labelKey }) => (
               <li key={to}>
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
-                    `transition-colors font-medium ${
+                    `text-sm font-medium transition-all whitespace-nowrap flex items-center gap-1.5 ${
                       isActive
-                        ? 'text-[var(--color-primary)]'
+                        ? 'text-[var(--color-text-base)] font-semibold'
                         : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-base)]'
                     }`
                   }
-                  onClick={() => setIsOpen(false)}
                 >
-                  {t(labelKey)}
+                  {({ isActive }) => (
+                    <>
+                      {/* Маленькая точка-индикатор для активной страницы со свечением */}
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                          isActive
+                            ? 'bg-[var(--color-primary)] scale-100 opacity-100 shadow-[0_0_8px_var(--color-primary)]'
+                            : 'bg-transparent scale-0 opacity-0'
+                        }`}
+                      />
+                      <span className={isActive ? 'text-[var(--color-primary)]' : ''}>{t(labelKey)}</span>
+                    </>
+                  )}
                 </NavLink>
               </li>
             ))}
           </ul>
 
-          {/* Переключатели (мобильная версия) */}
-          <div className='flex flex-col gap-4 items-center'>
+          {/* Разделитель */}
+          <div className='h-4 w-[1px] bg-[var(--color-text-subtle)]/20'></div>
+
+          {/* Единая панель инструментов (Язык + Тема) */}
+          <div className='inline-flex items-center p-0.5 rounded-lg bg-[var(--color-bg-muted)] border border-[var(--color-text-subtle)]/20'>
             <LanguageSwitcher />
+            <div className='h-3.5 w-[1px] bg-[var(--color-text-subtle)]/25 mx-0.5'></div>
             <ThemeSwitcher />
           </div>
         </div>
-      )}
-    </nav>
+
+        {/* Элементы управления для планшетов и мобильных */}
+        <div className='flex lg:hidden items-center gap-2.5'>
+          <div className='inline-flex items-center p-0.5 rounded-lg bg-[var(--color-bg-muted)] border border-[var(--color-text-subtle)]/20'>
+            <LanguageSwitcher />
+            <div className='h-3.5 w-[1px] bg-[var(--color-text-subtle)]/25 mx-0.5'></div>
+            <ThemeSwitcher />
+          </div>
+          <button
+            className='z-50 text-[var(--color-text-base)] p-1 cursor-pointer'
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label='Toggle menu'
+          >
+            <FontAwesomeIcon icon={isOpen ? faXmark : faBars} size='lg' />
+          </button>
+        </div>
+
+        {/* Мобильное/Планшетное меню */}
+        {isOpen && (
+          <div className='absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-8 text-xl bg-[var(--color-bg-base)]/95 backdrop-blur-2xl text-[var(--color-text-base)] z-40'>
+            <ul className='flex flex-col items-center gap-6'>
+              {navbarLinks.map(({ to, labelKey }) => (
+                <li key={to}>
+                  <NavLink
+                    to={to}
+                    className={({ isActive }) =>
+                      `transition-colors font-medium text-lg flex items-center gap-3 ${
+                        isActive
+                          ? 'text-[var(--color-primary)] font-semibold'
+                          : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-base)]'
+                      }`
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <span
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            isActive
+                              ? 'bg-[var(--color-primary)] shadow-[0_0_10px_var(--color-primary)]'
+                              : 'bg-transparent'
+                          }`}
+                        />
+                        <span>{t(labelKey)}</span>
+                      </>
+                    )}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+
+            <div className='h-[1px] w-16 bg-[var(--color-text-subtle)]/20 my-2'></div>
+
+            <div className='inline-flex items-center p-0.5 rounded-lg bg-[var(--color-bg-muted)] border border-[var(--color-text-subtle)]/20'>
+              <LanguageSwitcher />
+              <div className='h-3.5 w-[1px] bg-[var(--color-text-subtle)]/25 mx-0.5'></div>
+              <ThemeSwitcher />
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
   );
 };
