@@ -1,84 +1,111 @@
-import {
-  faFacebook,
-  faGithub,
-  faTelegram,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Trans, useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import i18n from "../../../i18n";
+import { Trans, useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import i18n from '../../../i18n';
 
 export const Home = () => {
   const { t } = useTranslation();
+
   return (
-    <section className="flex flex-col items-center justify-center px-6 text-center flex-1">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-primary-light">
-        {t("home.welcome")}
-      </h1>
+    <div className='flex-1 flex flex-col justify-between w-full max-w-5xl mx-auto px-6 py-12 md:py-16 text-left'>
+      <main className='w-full'>
+        {/* Главный заголовок и роль */}
+        <div className='max-w-3xl mb-10'>
+          <h1 className='text-5xl md:text-6xl font-extrabold text-[var(--color-text-base)] tracking-tight leading-tight mb-3'>
+            {t('home.role', 'Fullstack Developer')}
+          </h1>
 
-      <p className="text-xl md:text-2xl font-semibold text-text-base mb-2">
-        {t("home.greeting")}
-      </p>
+          {/* Строка стека с акцентным цветом */}
+          <div className='font-mono text-xl md:text-2xl text-[var(--color-primary)] mb-6 flex items-center gap-3'>
+            <span>.NET / C#</span>
+            <span className='text-[var(--color-text-subtle)] font-light'>|</span>
+            <span>React / TypeScript</span>
+          </div>
 
-      <p className="italic text-text-subtle mb-6">{t("home.slogan")}</p>
+          {/* Основное описание (бизнес-фокус) */}
+          <p className='text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-8'>
+            <Trans i18nKey='home.description'>
+              Более 5 лет коммерческого опыта. Помогаю компаниям наводить порядок в операционных процессах: переводить
+              учет из громоздких Excel-таблиц и устаревших систем в надежные, удобные и масштабируемые веб-сервисы.
+            </Trans>
+          </p>
 
-      <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
-        <Trans i18nKey="home.description">
-          Я разработчик, специализирующийся на
-          <span className="text-primary-light">TypeScript</span> и{" "}
-          <span className="text-primary-light">C#</span>.
-        </Trans>
-      </p>
+          {/* Кнопки действий */}
+          <div className='flex flex-wrap gap-4 items-center'>
+            <Link
+              to='/projects'
+              className='px-6 py-3.5 rounded-lg bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-dark)] transition shadow-sm flex items-center gap-2'
+            >
+              <span>{t('home.cta.projects', 'Смотреть проекты')}</span>
+              <span>&rarr;</span>
+            </Link>
 
-      <div className="mt-8 flex gap-4 flex-wrap justify-center">
-        <Link
-          to="/projects"
-          className="px-6 py-3 rounded bg-primary text-white font-semibold hover:bg-primary-light transition"
-        >
-          {t("home.cta.projects")}
-        </Link>
-        <Link
-          to="/about"
-          className="px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
-        >
-          {t("home.cta.about")}
-        </Link>
-        <a
-          href={t("links.resume")}
-          download={`Iakov_Yakovlev_Fullstack_${i18n.language.toUpperCase()}.pdf`}
-          className="px-6 py-3 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-white transition"
-        >
-          {t("home.cta.resume")}
-        </a>
-      </div>
+            <Link
+              to='/about'
+              className='px-6 py-3.5 rounded-lg border border-[var(--color-primary)] text-[var(--color-primary)] font-medium hover:bg-[var(--color-primary)] hover:text-white transition'
+            >
+              {t('home.cta.about', 'Узнать больше обо мне')}
+            </Link>
 
-      {/* 🎯 иконки соцсетей */}
-      <div className="flex gap-6 mt-10 text-2xl text-gray-400 transition">
-        <a
-          href={t("links.github")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-primary-light"
-        >
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a
-          href={t("links.telegram")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-primary-light"
-        >
-          <FontAwesomeIcon icon={faTelegram} />
-        </a>
-        <a
-          href={t("links.facebook")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-primary-light"
-        >
-          <FontAwesomeIcon icon={faFacebook} />
-        </a>
-      </div>
-    </section>
+            <a
+              href={t('links.resume')}
+              download={`Iakov_Yakovlev_Fullstack_${i18n.language.toUpperCase()}.pdf`}
+              className='px-6 py-3.5 rounded-lg border border-[var(--color-text-subtle)] text-[var(--color-text-base)] font-medium hover:border-[var(--color-primary)] transition'
+            >
+              {t('home.cta.resume', 'Скачать резюме')}
+            </a>
+          </div>
+        </div>
+
+        <hr className='border-[var(--color-text-subtle)]/20 my-10' />
+
+        {/* Информационные блоки BPMN Note Style (диагональный срез + градиент от сгиба) */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          {/* Блок 1 */}
+          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/20 shadow-sm flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.12)_45%,rgba(0,0,0,0.04)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/30 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.06)]'></div>
+
+            <div>
+              <div className='text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
+                {t('home.cards.card1.title')}
+              </div>
+              <div className='text-xs font-semibold uppercase tracking-wider text-[var(--color-text-subtle)] mb-3'>
+                {t('home.cards.card1.subtitle')}
+              </div>
+            </div>
+            <p className='text-xs text-[var(--color-text-muted)] leading-relaxed'>{t('home.cards.card1.desc')}</p>
+          </div>
+
+          {/* Блок 2 */}
+          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/20 shadow-sm flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.12)_45%,rgba(0,0,0,0.04)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/30 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.06)]'></div>
+
+            <div>
+              <div className='text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
+                {t('home.cards.card2.title')}
+              </div>
+              <div className='text-xs font-semibold uppercase tracking-wider text-[var(--color-text-subtle)] mb-3'>
+                {t('home.cards.card2.subtitle')}
+              </div>
+            </div>
+            <p className='text-xs text-[var(--color-text-muted)] leading-relaxed'>{t('home.cards.card2.desc')}</p>
+          </div>
+
+          {/* Блок 3 */}
+          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/20 shadow-sm flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.12)_45%,rgba(0,0,0,0.04)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/30 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.06)]'></div>
+
+            <div>
+              <div className='text-2xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
+                {t('home.cards.card3.title')}
+              </div>
+              <div className='text-xs font-semibold uppercase tracking-wider text-[var(--color-text-subtle)] mb-3'>
+                {t('home.cards.card3.subtitle')}
+              </div>
+            </div>
+            <p className='text-xs text-[var(--color-text-muted)] leading-relaxed'>{t('home.cards.card3.desc')}</p>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 };

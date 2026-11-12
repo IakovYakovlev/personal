@@ -8,14 +8,29 @@
     "contact": "Contact"
   },
   "home": {
-    "welcome": "Welcome 👋",
-    "greeting": "Glad to see you in my portfolio!",
-    "slogan": "From ideas to a working product.",
-    "description": "I am a developer specializing in <1>TypeScript</1> and <3>C#</3>. I help companies and teams build fast, reliable, and modern web applications, APIs, and beautiful interfaces.",
+    "role": "Fullstack Developer",
+    "description": "5+ years of commercial experience. I help businesses streamline operational processes by replacing cumbersome Excel spreadsheets and legacy systems with reliable, scalable web services.",
     "cta": {
       "projects": "View Projects",
-      "about": "Learn More About Me",
+      "about": "About Me",
       "resume": "Download Resume"
+    },
+    "cards": {
+      "card1": {
+        "title": "5+ Years",
+        "subtitle": "Commercial Experience",
+        "desc": "End-to-end web development and process automation"
+      },
+      "card2": {
+        "title": "Excel Migration",
+        "subtitle": "Specialization",
+        "desc": "Transforming operational accounting into a unified web base"
+      },
+      "card3": {
+        "title": ".NET 8 & React 18",
+        "subtitle": "Tech Stack",
+        "desc": "C#, ASP.NET Core, TypeScript, Next.js, PostgreSQL"
+      }
     }
   },
   "about": {
