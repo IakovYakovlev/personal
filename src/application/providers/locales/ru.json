@@ -27,7 +27,7 @@
         "desc": "Перевод операционного учета в единую веб-базу"
       },
       "card3": {
-        "title": ".NET 8 & React 18",
+        "title": ".NET & React",
         "subtitle": "Технологическая база",
         "desc": "C#, ASP.NET Core, TypeScript, Next.js, PostgreSQL"
       }

@@ -27,11 +27,11 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-20 py-4 backdrop-blur-md z-50 transition-colors
-        ${theme === 'dark' ? 'bg-black/40 text-white' : 'bg-white/40 text-black'}`}
+      className={`fixed top-0 left-0 w-full flex justify-between items-center px-6 md:px-20 py-4 backdrop-blur-md z-50 transition-colors border-b border-[var(--color-text-subtle)]/10
+        ${theme === 'dark' ? 'bg-[var(--color-bg-base)]/80 text-[var(--color-text-base)]' : 'bg-[var(--color-bg-base)]/80 text-[var(--color-text-base)]'}`}
     >
       {/* Логотип */}
-      <Link to='/' className='font-bold text-xl text-cyan-400'>
+      <Link to='/' className='font-bold text-xl text-[var(--color-primary)]'>
         {t('nav.brand')}
       </Link>
 
@@ -42,12 +42,10 @@ export const Navbar = () => {
             <NavLink
               to={to}
               className={({ isActive }) =>
-                `transition-colors ${
+                `transition-colors font-medium ${
                   isActive
-                    ? 'text-primary-light'
-                    : theme === 'dark'
-                      ? 'text-gray-300 hover:text-white'
-                      : 'text-gray-700 hover:text-black'
+                    ? 'text-[var(--color-primary)]'
+                    : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-base)]'
                 }`
               }
             >
@@ -64,28 +62,23 @@ export const Navbar = () => {
       </div>
 
       {/* Бургер-кнопка (мобильная версия) */}
-      <button className='md:hidden z-50 me-7 mt-1' onClick={() => setIsOpen(!isOpen)}>
+      <button className='md:hidden z-50 me-7 mt-1 text-[var(--color-text-base)]' onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon={isOpen ? faXmark : faBars} size='lg' />
       </button>
 
       {/* Мобильное меню */}
       {isOpen && (
-        <div
-          className={`absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-8 text-xl
-            ${theme === 'dark' ? 'bg-[#0f172a] text-white' : 'bg-white text-black'}`}
-        >
-          <ul className='flex flex-col gap-6'>
+        <div className='absolute top-0 left-0 w-full h-screen flex flex-col items-center justify-center gap-8 text-xl bg-[var(--color-bg-base)] text-[var(--color-text-base)]'>
+          <ul className='flex flex-col gap-6 text-center'>
             {navbarLinks.map(({ to, labelKey }) => (
               <li key={to}>
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
-                    `transition-colors ${
+                    `transition-colors font-medium ${
                       isActive
-                        ? 'text-primary-light'
-                        : theme === 'dark'
-                          ? 'text-gray-300 hover:text-white'
-                          : 'text-gray-700 hover:text-black'
+                        ? 'text-[var(--color-primary)]'
+                        : 'text-[var(--color-text-muted)] hover:text-[var(--color-text-base)]'
                     }`
                   }
                   onClick={() => setIsOpen(false)}

@@ -27,7 +27,7 @@
         "desc": "Transforming operational accounting into a unified web base"
       },
       "card3": {
-        "title": ".NET 8 & React 18",
+        "title": ".NET & React",
         "subtitle": "Tech Stack",
         "desc": "C#, ASP.NET Core, TypeScript, Next.js, PostgreSQL"
       }

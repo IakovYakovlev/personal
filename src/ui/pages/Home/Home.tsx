@@ -6,34 +6,34 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex-1 flex flex-col justify-between w-full max-w-5xl mx-auto px-6 py-12 md:py-16 text-left'>
+    <div className='flex-1 flex flex-col justify-between w-full max-w-6xl mx-auto px-6 md:px-12 py-12 md:py-20 text-left'>
       <main className='w-full'>
         {/* Главный заголовок и роль */}
-        <div className='max-w-3xl mb-10'>
-          <h1 className='text-5xl md:text-6xl font-extrabold text-[var(--color-text-base)] tracking-tight leading-tight mb-3'>
+        <div className='max-w-3xl mb-12'>
+          <h1 className='text-4xl md:text-6xl font-extrabold text-[var(--color-text-base)] tracking-tight leading-tight mb-4'>
             {t('home.role', 'Fullstack Developer')}
           </h1>
 
-          {/* Строка стека с акцентным цветом */}
-          <div className='font-mono text-xl md:text-2xl text-[var(--color-primary)] mb-6 flex items-center gap-3'>
+          {/* Строка стека с акцентным цветом и строгим ритмом */}
+          <div className='font-mono text-lg md:text-xl text-[var(--color-primary)] mb-6 flex items-center gap-3'>
             <span>.NET / C#</span>
             <span className='text-[var(--color-text-subtle)] font-light'>|</span>
             <span>React / TypeScript</span>
           </div>
 
           {/* Основное описание (бизнес-фокус) */}
-          <p className='text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed mb-8'>
+          <p className='text-base md:text-lg text-[var(--color-text-muted)] leading-relaxed mb-8'>
             <Trans i18nKey='home.description'>
               Более 5 лет коммерческого опыта. Помогаю компаниям наводить порядок в операционных процессах: переводить
               учет из громоздких Excel-таблиц и устаревших систем в надежные, удобные и масштабируемые веб-сервисы.
             </Trans>
           </p>
 
-          {/* Кнопки действий */}
+          {/* Кнопки действий (идеально выровнены по высоте и паддингам) */}
           <div className='flex flex-wrap gap-4 items-center'>
             <Link
               to='/projects'
-              className='px-6 py-3.5 rounded-lg bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-dark)] transition shadow-sm flex items-center gap-2'
+              className='px-6 py-3 rounded-lg bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-dark)] transition shadow-sm flex items-center gap-2'
             >
               <span>{t('home.cta.projects', 'Смотреть проекты')}</span>
               <span>&rarr;</span>
@@ -41,7 +41,7 @@ export const Home = () => {
 
             <Link
               to='/about'
-              className='px-6 py-3.5 rounded-lg border border-[var(--color-primary)] text-[var(--color-primary)] font-medium hover:bg-[var(--color-primary)] hover:text-white transition'
+              className='px-6 py-3 rounded-lg border border-[var(--color-primary)] text-[var(--color-primary)] font-medium hover:bg-[var(--color-primary)] hover:text-white transition'
             >
               {t('home.cta.about', 'Узнать больше обо мне')}
             </Link>
@@ -49,20 +49,20 @@ export const Home = () => {
             <a
               href={t('links.resume')}
               download={`Iakov_Yakovlev_Fullstack_${i18n.language.toUpperCase()}.pdf`}
-              className='px-6 py-3.5 rounded-lg border border-[var(--color-text-subtle)] text-[var(--color-text-base)] font-medium hover:border-[var(--color-primary)] transition'
+              className='px-6 py-3 rounded-lg border border-[var(--color-text-subtle)] text-[var(--color-text-base)] font-medium hover:border-[var(--color-primary)] transition'
             >
               {t('home.cta.resume', 'Скачать резюме')}
             </a>
           </div>
         </div>
 
-        <hr className='border-[var(--color-text-subtle)]/20 my-10' />
+        <hr className='border-[var(--color-text-subtle)]/15 my-12' />
 
-        {/* Информационные блоки BPMN Note Style (диагональный срез + градиент от сгиба) */}
+        {/* Информационные блоки BPMN Note Style с чистыми тенями и единым ритмом */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {/* Блок 1 */}
-          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/20 shadow-sm flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
-            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.12)_45%,rgba(0,0,0,0.04)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/30 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.06)]'></div>
+          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)]'></div>
 
             <div>
               <div className='text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
@@ -76,8 +76,8 @@ export const Home = () => {
           </div>
 
           {/* Блок 2 */}
-          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/20 shadow-sm flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
-            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.12)_45%,rgba(0,0,0,0.04)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/30 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.06)]'></div>
+          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)]'></div>
 
             <div>
               <div className='text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
@@ -91,11 +91,11 @@ export const Home = () => {
           </div>
 
           {/* Блок 3 */}
-          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/20 shadow-sm flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
-            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.12)_45%,rgba(0,0,0,0.04)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/30 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.06)]'></div>
+          <div className='relative bg-[var(--color-bg-muted)] p-6 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)]'></div>
 
             <div>
-              <div className='text-2xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
+              <div className='text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
                 {t('home.cards.card3.title')}
               </div>
               <div className='text-xs font-semibold uppercase tracking-wider text-[var(--color-text-subtle)] mb-3'>
