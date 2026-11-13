@@ -19,18 +19,18 @@
     "cards": {
       "card1": {
         "title": "5+ Years",
-        "subtitle": "Commercial Experience",
-        "desc": "End-to-end web development and process automation"
+        "subtitle": "Full-Stack Development",
+        "desc": "Developing reliable .NET backend logic and React user interfaces"
       },
       "card2": {
-        "title": "Excel Migration",
-        "subtitle": "Specialization",
-        "desc": "Transforming operational accounting into a unified web base"
+        "title": "Automation",
+        "subtitle": "Excel & Legacy Migration",
+        "desc": "Transforming operational tracking into fast, reliable web systems"
       },
       "card3": {
-        "title": ".NET & React",
-        "subtitle": "Tech Stack",
-        "desc": "C#, ASP.NET Core, TypeScript, Next.js, PostgreSQL"
+        "title": "End-to-End",
+        "subtitle": "Turnkey Solutions",
+        "desc": "Handling projects from business analysis to release and support"
       }
     }
   },
