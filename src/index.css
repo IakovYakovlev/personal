@@ -31,6 +31,10 @@
   --color-bg-muted: #1c1917; /* stone-900 */
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Базовые стили для тела документа, чтобы шрифт применился глобально */
 body {
   font-family: var(--font-sans);

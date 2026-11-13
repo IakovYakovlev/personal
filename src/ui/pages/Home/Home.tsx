@@ -8,17 +8,21 @@ export const Home = () => {
   return (
     <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-6 md:py-10 text-left'>
       <main className='w-full'>
-        {/* Главный заголовок с локализацией и идеальным размером */}
+        {/* Главный заголовок и роль */}
         <div className='max-w-3xl mb-8'>
+          {/* Индикатор статуса (Зеленый акцент готовности) */}
+          <div className='inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs md:text-sm font-semibold mb-4 shadow-sm'>
+            <span className='w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.6)]' />
+            <span>{t('home.status', 'Открыт к проектам по автоматизации и постоянному сотрудничеству')}</span>
+          </div>
           <h1 className='text-3xl md:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-3'>
             {t('home.role', 'Разработка надежных веб-приложений')}
           </h1>
 
           {/* Строка стека с акцентным цветом */}
-          <div className='font-mono text-base md:text-lg text-[var(--color-primary)] mb-4 flex items-center gap-3'>
-            <span>.NET / C#</span>
-            <span className='text-[var(--color-text-subtle)] font-light'>|</span>
-            <span>React / TypeScript</span>
+          <div className='font-mono text-xs md:text-sm text-[var(--color-text-subtle)] mb-5 border-l-2 border-[var(--color-primary)]/30 pl-3 py-0.5 space-y-1'>
+            <div>C# / .NET</div>
+            <div>TypeScript / React</div>
           </div>
 
           {/* Основное описание */}
@@ -63,7 +67,7 @@ export const Home = () => {
         <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6'>
           {/* Блок 1 */}
           <div className='relative bg-[var(--color-bg-muted)] p-5 md:p-6 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
-            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)]'></div>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] dark:bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(255,255,255,0.05)_45%,transparent_70%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)] dark:shadow-none'></div>
 
             <div>
               <div className='text-2xl md:text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
@@ -78,7 +82,7 @@ export const Home = () => {
 
           {/* Блок 2 */}
           <div className='relative bg-[var(--color-bg-muted)] p-5 md:p-6 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
-            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)]'></div>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] dark:bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(255,255,255,0.05)_45%,transparent_70%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)] dark:shadow-none'></div>
 
             <div>
               <div className='text-2xl md:text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
@@ -93,7 +97,7 @@ export const Home = () => {
 
           {/* Блок 3 */}
           <div className='relative bg-[var(--color-bg-muted)] p-5 md:p-6 rounded-2xl border border-[var(--color-text-subtle)]/15 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between cursor-default overflow-hidden [clip-path:polygon(0_0,calc(100%-2.25rem)_0,100%_2.25rem,100%_100%,0_100%)]'>
-            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)]'></div>
+            <div className='absolute top-0 right-0 w-9 h-9 bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(0,0,0,0.08)_45%,rgba(0,0,0,0.02)_70%,transparent_100%)] dark:bg-[linear-gradient(225deg,var(--color-bg-base)_0%,var(--color-bg-base)_45%,rgba(255,255,255,0.05)_45%,transparent_70%)] border-l border-b border-[var(--color-text-subtle)]/20 pointer-events-none rounded-bl-lg shadow-[-2px_2px_4px_rgba(0,0,0,0.04)] dark:shadow-none'></div>
 
             <div>
               <div className='text-2xl md:text-3xl font-bold text-[var(--color-text-base)] font-mono mb-1'>
