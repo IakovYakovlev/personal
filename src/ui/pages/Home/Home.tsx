@@ -8,12 +8,13 @@ export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-6 md:py-12 text-left'>
+    // На планшетах (md-lg) уменьшаем вертикальный паддинг, на десктопе возвращаем ваши py-12
+    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-4 lg:py-12 text-left'>
       <main className='w-full'>
-        {/* Главный заголовок и контент */}
-        <div className='max-w-3xl mb-6 md:mb-8'>
+        {/* Главный заголовок и контент: на планшетах уменьшаем нижний отступ */}
+        <div className='max-w-3xl mb-4 lg:mb-8'>
           {/* Шапка: Аватар + Кликабельный Статус */}
-          <div className='flex items-center gap-4 sm:gap-5 mb-4'>
+          <div className='flex items-center gap-4 sm:gap-5 mb-3 lg:mb-4'>
             {/* Круглый аватар с CAD-уголками и ховер-эффектами */}
             <div className='relative w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 group cursor-pointer'>
               <div className='w-full h-full rounded-full overflow-hidden border-4 border-[var(--color-primary)] shadow-md group-hover:shadow-[0_0_20px_rgba(var(--color-primary-rgb),0.5)] transition-all duration-300 bg-[var(--color-bg-muted)] relative'>
@@ -56,18 +57,18 @@ export const Home = () => {
             </div>
           </div>
 
-          <h1 className='text-3xl md:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-3 md:mb-4'>
+          <h1 className='text-3xl lg:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-2.5 lg:mb-4'>
             {t('home.role', 'Разработка надежных веб-приложений')}
           </h1>
 
           {/* Строка стека */}
-          <div className='font-mono text-xs md:text-sm text-[var(--color-text-subtle)] mb-4 md:mb-5 border-l-2 border-[var(--color-primary)]/30 pl-3 py-0.5 space-y-0.5'>
+          <div className='font-mono text-xs md:text-sm text-[var(--color-text-subtle)] mb-3 lg:mb-5 border-l-2 border-[var(--color-primary)]/30 pl-3 py-0.5 space-y-0.5'>
             <div>C# / .NET</div>
             <div>TypeScript / React</div>
           </div>
 
           {/* Основное описание */}
-          <p className='text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed mb-6 md:mb-7'>
+          <p className='text-sm lg:text-base text-[var(--color-text-muted)] leading-relaxed mb-4 lg:mb-7'>
             <Trans i18nKey='home.description'>
               Веб-разработчик полного цикла (Fullstack) с 5+ годами опыта. Специализируюсь на автоматизации бизнеса и
               создании надежных цифровых решений. Превращаю запутанный учет в таблицах и ручные процессы в четко
@@ -109,18 +110,18 @@ export const Home = () => {
         </div>
 
         {/* Разделитель */}
-        <hr className='border-[var(--color-text-subtle)]/15 my-6 md:my-7' />
+        <hr className='border-[var(--color-text-subtle)]/15 my-4 lg:my-7' />
 
-        {/* Информационные инженерные блоки (Blueprint style) с глянцевым эффектом */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6'>
+        {/* Информационные инженерные блоки (Blueprint style) с адаптивными отступами */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-3.5 lg:gap-6'>
           {/* Блок 1 */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-4 md:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
             {/* Глянцевый блик при наведении */}
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
 
             <div className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
-            <div className='flex items-center justify-between mb-3 relative z-10'>
+            <div className='flex items-center justify-between mb-2 lg:mb-3 relative z-10'>
               <span className='font-mono text-[10px] uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
                 #SPEC-01
               </span>
@@ -140,10 +141,10 @@ export const Home = () => {
             </div>
 
             <div className='relative z-10'>
-              <div className='text-lg md:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
+              <div className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
                 {t('home.cards.card1.title')}
               </div>
-              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-2'>
+              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5 lg:mb-2'>
                 {t('home.cards.card1.subtitle')}
               </div>
             </div>
@@ -153,13 +154,13 @@ export const Home = () => {
           </div>
 
           {/* Блок 2 */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-4 md:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
             {/* Глянцевый блик при наведении */}
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
 
             <div className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
-            <div className='flex items-center justify-between mb-3 relative z-10'>
+            <div className='flex items-center justify-between mb-2 lg:mb-3 relative z-10'>
               <span className='font-mono text-[10px] uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
                 #SPEC-02
               </span>
@@ -179,10 +180,10 @@ export const Home = () => {
             </div>
 
             <div className='relative z-10'>
-              <div className='text-lg md:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
+              <div className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
                 {t('home.cards.card2.title')}
               </div>
-              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-2'>
+              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5 lg:mb-2'>
                 {t('home.cards.card2.subtitle')}
               </div>
             </div>
@@ -192,13 +193,13 @@ export const Home = () => {
           </div>
 
           {/* Блок 3 */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-4 md:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
             {/* Глянцевый блик при наведении */}
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
 
             <div className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
-            <div className='flex items-center justify-between mb-3 relative z-10'>
+            <div className='flex items-center justify-between mb-2 lg:mb-3 relative z-10'>
               <span className='font-mono text-[10px] uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
                 #SPEC-03
               </span>
@@ -218,10 +219,10 @@ export const Home = () => {
             </div>
 
             <div className='relative z-10'>
-              <div className='text-lg md:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
+              <div className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
                 {t('home.cards.card3.title')}
               </div>
-              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-2'>
+              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5 lg:mb-2'>
                 {t('home.cards.card3.subtitle')}
               </div>
             </div>
