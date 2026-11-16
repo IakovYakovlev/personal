@@ -22,7 +22,7 @@ export const Footer = () => {
           <span className='text-[var(--color-primary)] font-extrabold'>~/</span>
           <span className='text-[var(--color-text-base)] font-semibold'>Iakov.dev</span>
           <span className='text-[var(--color-text-subtle)]/40'>•</span>
-          <span>© {year}</span>
+          <span className='whitespace-nowrap'>© {year}</span>
         </div>
 
         {/* Центральная часть: Стек со светящейся точкой */}

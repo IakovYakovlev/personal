@@ -8,7 +8,7 @@ export const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-3 lg:py-5 text-left overflow-hidden'>
+    <div className='flex-1 flex flex-col justify-start w-full max-w-6xl mx-auto px-6 md:px-12 py-3 lg:py-5 text-left overflow-hidden'>
       <main className='w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start'>
         {/* ЛЕВАЯ КОЛОНКА (4): Фото с нахлестом + Метрики друг под другом */}
         <div className='lg:col-span-4 flex flex-col gap-3'>
@@ -66,14 +66,13 @@ export const About = () => {
               <div className='text-xs uppercase tracking-wider text-[var(--color-text-subtle)] opacity-80'>
                 {t('about.metrics.ai_label')}
               </div>
-              {/* Исправлено с text-sm на text-base, чтобы размер совпадал */}
               <div className='text-base font-bold text-[var(--color-primary)]'>{t('about.metrics.ai_value')}</div>
             </div>
           </div>
         </div>
 
         {/* ПРАВАЯ КОЛОНКА (8): Заголовок -> Статус-плашка -> Текстовые блоки -> CTA снизу */}
-        <div className='lg:col-span-8 flex flex-col justify-start space-y-2'>
+        <div className='lg:col-span-8 flex flex-col justify-start space-y-3.5'>
           {/* Общий заголовок секции */}
           <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider'>
             <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
@@ -124,13 +123,15 @@ export const About = () => {
             <div className='absolute top-0 left-0 w-2.5 h-2.5 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
             <div className='flex items-center gap-2 text-[var(--color-text-muted)]'>
-              <span className='text-[var(--color-primary)] font-bold'>{t('about.cta.label')}</span>
+              {/* Добавлен whitespace-nowrap, чтобы // NEXT STEP: не разрывалось */}
+              <span className='text-[var(--color-primary)] font-bold whitespace-nowrap'>{t('about.cta.label')}</span>
               <span>{t('about.cta.text')}</span>
             </div>
 
+            {/* Кнопка на мобильных по центру (w-full с justify-center), на десктопе auto */}
             <Link
               to='/contact'
-              className='inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-dark)] transition-all cursor-pointer shadow-sm self-start sm:self-auto'
+              className='w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-dark)] transition-all cursor-pointer shadow-sm'
             >
               <span>{t('about.cta.btn')}</span>
               <span>&rarr;</span>
