@@ -6,7 +6,6 @@ import { StatusBadge } from '../../components/StatusBadge';
 
 export const Home = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   return (
     <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-4 text-left'>
