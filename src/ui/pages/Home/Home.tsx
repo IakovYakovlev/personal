@@ -1,5 +1,5 @@
 import { Trans, useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import i18n from '../../../i18n';
 import avatar from '../../../assets/images/avatar.jpg';
 import { StatusBadge } from '../../components/StatusBadge';
