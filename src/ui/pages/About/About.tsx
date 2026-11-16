@@ -8,12 +8,11 @@ export const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-3 lg:py-5 text-left overflow-hidden'>
+    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3 text-left overflow-hidden'>
       <main className='w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start'>
-        {/* ЛЕВАЯ КОЛОНКА (4): Фото с нахлестом + Метрики друг под другом */}
+        {/* ЛЕВАЯ КОЛОНКА (4): Фото + Метрики */}
         <div className='lg:col-span-4 flex flex-col gap-3'>
-          <div className='relative w-full max-w-[320px] mx-auto lg:mx-0 pb-6 pr-2'>
-            {/* Главный портрет */}
+          <div className='relative w-full max-w-[320px] mx-auto lg:mx-0 pb-4 pr-2'>
             <div className='relative w-full aspect-[4/5] rounded-2xl overflow-hidden border-2 border-[var(--color-primary)]/40 shadow-xl group bg-[var(--color-bg-muted)]'>
               <img
                 src={avatar}
@@ -22,12 +21,11 @@ export const About = () => {
               />
               <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
 
-              <div className='absolute bottom-3 left-3 bg-[var(--color-bg-base)]/80 backdrop-blur-md px-3 py-1 rounded-lg border border-[var(--color-text-subtle)]/20 text-[11px] font-mono text-[var(--color-text-base)] shadow-sm z-10'>
+              <div className='absolute bottom-3 left-3 bg-[var(--color-bg-base)]/80 backdrop-blur-md px-3 py-1 rounded-lg border border-[var(--color-text-subtle)]/20 text-xs font-mono text-[var(--color-text-base)] shadow-sm z-10'>
                 #DEV-PROFILE
               </div>
             </div>
 
-            {/* Рабочее пространство */}
             <div className='absolute -bottom-3 -right-7 w-2/3 max-w-[190px] aspect-[4/3] rounded-xl overflow-hidden border-2 border-[var(--color-primary)] shadow-lg bg-[var(--color-bg-muted)] z-20 group'>
               <img
                 src={workspace}
@@ -43,8 +41,8 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Метрики друг под другом */}
-          <div className='max-w-[312px] mx-auto lg:mx-0 w-full flex flex-col gap-2 font-mono mt-5'>
+          {/* Метрики */}
+          <div className='max-w-[312px] mx-auto lg:mx-0 w-full flex flex-col gap-2 font-mono mt-3'>
             <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-2.5 rounded-xl border border-[var(--color-text-subtle)]/15 flex items-center justify-between group hover:border-[var(--color-primary)]/50 transition-colors'>
               <div className='absolute top-0 left-0 w-2.5 h-2.5 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
               <div className='text-xs uppercase tracking-wider text-[var(--color-text-subtle)] opacity-80'>
@@ -71,9 +69,8 @@ export const About = () => {
           </div>
         </div>
 
-        {/* ПРАВАЯ КОЛОНКА (8): Увеличенный шрифт и лаконичный текст */}
-        <div className='lg:col-span-8 flex flex-col justify-start space-y-4'>
-          {/* Общий заголовок секции */}
+        {/* ПРАВАЯ КОЛОНКА (8): Текстовые блоки */}
+        <div className='lg:col-span-8 flex flex-col justify-start space-y-3'>
           <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider'>
             <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
             {t('about.section')}
@@ -83,45 +80,44 @@ export const About = () => {
             {t('about.title')}
           </h1>
 
-          {/* Плашка статуса */}
           <StatusBadge />
 
-          {/* Блок 1: Профиль и стек */}
-          <div className='space-y-1'>
-            <span className='font-mono text-[10px] text-[var(--color-text-subtle)] uppercase tracking-widest'>
+          {/* Блок 1 */}
+          <div className='space-y-0.5'>
+            <span className='font-mono text-2xs text-[var(--color-text-subtle)] uppercase tracking-widest'>
               {t('about.block1_label')}
             </span>
-            <p className='text-sm md:text-base text-[var(--color-text-base)] font-medium leading-relaxed'>
+            <p className='text-base lg:text-lg text-[var(--color-text-base)] font-medium leading-relaxed'>
               {t('about.intro')}
             </p>
           </div>
 
-          {/* Блок 2: Практический опыт и кейсы */}
-          <div className='space-y-2'>
-            <span className='font-mono text-[10px] text-[var(--color-text-subtle)] uppercase tracking-widest'>
+          {/* Блок 2 */}
+          <div className='space-y-1.5'>
+            <span className='font-mono text-2xs text-[var(--color-text-subtle)] uppercase tracking-widest'>
               {t('about.block2_label')}
             </span>
-            <p className='text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed'>{t('about.main')}</p>
+            <p className='text-base lg:text-lg text-[var(--color-text-muted)] leading-relaxed'>{t('about.main')}</p>
 
-            <div className='relative bg-[var(--color-bg-muted)] p-3.5 rounded-xl border-l-4 border-[var(--color-primary)] shadow-sm'>
-              <p className='text-sm md:text-base text-[var(--color-text-base)] italic leading-relaxed'>
+            <div className='relative bg-[var(--color-bg-muted)] p-3 rounded-xl border-l-4 border-[var(--color-primary)] shadow-sm'>
+              <p className='text-base lg:text-lg text-[var(--color-text-base)] italic leading-relaxed'>
                 {t('about.highlight')}
               </p>
             </div>
           </div>
 
-          {/* Блок 3: Инженерный подход */}
-          <div className='space-y-1'>
-            <span className='font-mono text-[10px] text-[var(--color-text-subtle)] uppercase tracking-widest'>
+          {/* Блок 3 */}
+          <div className='space-y-0.5'>
+            <span className='font-mono text-2xs text-[var(--color-text-subtle)] uppercase tracking-widest'>
               {t('about.block3_label')}
             </span>
-            <p className='text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed'>
+            <p className='text-base lg:text-lg text-[var(--color-text-muted)] leading-relaxed'>
               {t('about.conclusion')}
             </p>
           </div>
 
-          {/* CTA-ПЛАШКА СПРАВА СНИЗУ */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] px-4 py-3.5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 font-mono text-xs mt-3 group'>
+          {/* CTA-ПЛАШКА */}
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] px-4 py-3 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 font-mono text-xs mt-2 group'>
             <div className='absolute top-0 left-0 w-2.5 h-2.5 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
             <div className='flex items-center gap-2 text-[var(--color-text-muted)]'>

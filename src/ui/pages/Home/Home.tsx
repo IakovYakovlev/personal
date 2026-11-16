@@ -8,13 +8,12 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-4 text-left'>
+    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3 text-left overflow-hidden'>
       <main className='w-full'>
-        {/* Главный заголовок и контент: на планшетах уменьшаем нижний отступ */}
-        <div className='max-w-3xl mb-4 lg:mb-8'>
+        {/* Главный заголовок и контент */}
+        <div className='max-w-3xl mb-3 lg:mb-5'>
           {/* Шапка: Аватар + Кликабельный Статус */}
           <div className='flex items-center gap-4 sm:gap-5 mb-3 lg:mb-4'>
-            {/* Круглый аватар с CAD-уголками и ховер-эффектами */}
             <div className='relative w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 group'>
               <div className='w-full h-full rounded-full overflow-hidden border-4 border-[var(--color-primary)] shadow-md group-hover:shadow-[0_0_20px_rgba(var(--color-primary-rgb),0.5)] transition-all duration-300 bg-[var(--color-bg-muted)] relative'>
                 <img
@@ -22,32 +21,28 @@ export const Home = () => {
                   alt='Iakov Yakovlev'
                   className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
                 />
-
-                {/* Эффект сканирующего луча при наведении */}
                 <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
               </div>
 
-              {/* CAD-угловые технические засечки поверх круга */}
               <div className='absolute -top-1 -left-1 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)] rounded-tl-full pointer-events-none group-hover:scale-110 transition-transform' />
               <div className='absolute -bottom-1 -right-1 w-3 h-3 border-r-2 border-b-2 border-[var(--color-primary)] rounded-br-full pointer-events-none group-hover:scale-110 transition-transform' />
             </div>
 
-            {/* Блок кликабельного статуса (ведет на /contact) */}
             <StatusBadge />
           </div>
 
-          <h1 className='text-3xl lg:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-2.5 lg:mb-4'>
+          <h1 className='text-3xl lg:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-2 lg:mb-3'>
             {t('home.role', 'Разработка надежных веб-приложений')}
           </h1>
 
           {/* Строка стека */}
-          <div className='font-mono text-xs md:text-sm text-[var(--color-text-subtle)] mb-3 lg:mb-5 border-l-2 border-[var(--color-primary)]/30 pl-3 py-0.5 space-y-0.5'>
+          <div className='font-mono text-xs md:text-sm text-[var(--color-text-subtle)] mb-2.5 lg:mb-4 border-l-2 border-[var(--color-primary)]/30 pl-3 py-0.5 space-y-0.5'>
             <div>C# / .NET</div>
             <div>TypeScript / React</div>
           </div>
 
           {/* Основное описание */}
-          <p className='text-sm lg:text-base text-[var(--color-text-muted)] leading-relaxed mb-4 lg:mb-7'>
+          <p className='text-base lg:text-lg text-[var(--color-text-muted)] leading-relaxed mb-4 lg:mb-6 font-medium'>
             <Trans i18nKey='home.description'>
               Веб-разработчик полного цикла (Fullstack) с 5+ годами опыта. Специализируюсь на автоматизации бизнеса и
               создании надежных цифровых решений. Превращаю запутанный учет в таблицах и ручные процессы в четко
@@ -59,7 +54,7 @@ export const Home = () => {
           <div className='flex flex-wrap gap-3 items-center'>
             <Link
               to='/projects'
-              className='px-4 py-2 rounded-lg bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-dark)] transition shadow-sm flex items-center gap-2'
+              className='px-4 py-2 rounded-lg bg-[var(--color-primary)] text-white text-sm lg:text-base font-semibold hover:bg-[var(--color-primary-dark)] transition shadow-sm flex items-center gap-2'
             >
               <span>{t('home.cta.projects', 'Смотреть проекты')}</span>
               <span>&rarr;</span>
@@ -68,7 +63,7 @@ export const Home = () => {
             <a
               href={t('links.resume')}
               download={`Iakov_Yakovlev_Fullstack_${i18n.language.toUpperCase()}.pdf`}
-              className='px-4 py-2 rounded-lg border border-[var(--color-text-subtle)] text-[var(--color-text-base)] text-sm font-medium hover:border-[var(--color-primary)] transition flex items-center gap-2'
+              className='px-4 py-2 rounded-lg border border-[var(--color-text-subtle)] text-[var(--color-text-base)] text-sm lg:text-base font-semibold hover:border-[var(--color-primary)] transition flex items-center gap-2'
             >
               <svg
                 className='w-4 h-4 text-[var(--color-text-subtle)]'
@@ -88,20 +83,17 @@ export const Home = () => {
           </div>
         </div>
 
-        {/* Разделитель */}
-        <hr className='border-[var(--color-text-subtle)]/15 my-4 lg:my-7' />
+        <hr className='border-[var(--color-text-subtle)]/15 my-3 lg:my-5' />
 
-        {/* Информационные инженерные блоки (Blueprint style) с адаптивными отступами */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-3.5 lg:gap-6'>
+        {/* Информационные инженерные блоки (Карточки) */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-3.5 lg:gap-5'>
           {/* Блок 1 */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
-            {/* Глянцевый блик при наведении */}
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-4 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
-
             <div className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
-            <div className='flex items-center justify-between mb-2 lg:mb-3 relative z-10'>
-              <span className='font-mono text-[10px] uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
+            <div className='flex items-center justify-between mb-2 relative z-10'>
+              <span className='font-mono text-2xs uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
                 #SPEC-01
               </span>
               <svg
@@ -120,27 +112,25 @@ export const Home = () => {
             </div>
 
             <div className='relative z-10'>
-              <div className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
+              <div className='text-base lg:text-lg font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
                 {t('home.cards.card1.title')}
               </div>
-              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5 lg:mb-2'>
+              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5'>
                 {t('home.cards.card1.subtitle')}
               </div>
             </div>
-            <p className='text-[13px] text-[var(--color-text-base)] opacity-90 leading-snug relative z-10'>
+            <p className='text-sm lg:text-base text-[var(--color-text-base)] opacity-90 leading-snug relative z-10'>
               {t('home.cards.card1.desc')}
             </p>
           </div>
 
           {/* Блок 2 */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
-            {/* Глянцевый блик при наведении */}
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-4 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
-
             <div className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
-            <div className='flex items-center justify-between mb-2 lg:mb-3 relative z-10'>
-              <span className='font-mono text-[10px] uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
+            <div className='flex items-center justify-between mb-2 relative z-10'>
+              <span className='font-mono text-2xs uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
                 #SPEC-02
               </span>
               <svg
@@ -159,27 +149,25 @@ export const Home = () => {
             </div>
 
             <div className='relative z-10'>
-              <div className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
+              <div className='text-base lg:text-lg font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
                 {t('home.cards.card2.title')}
               </div>
-              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5 lg:mb-2'>
+              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5'>
                 {t('home.cards.card2.subtitle')}
               </div>
             </div>
-            <p className='text-[13px] text-[var(--color-text-base)] opacity-90 leading-snug relative z-10'>
+            <p className='text-sm lg:text-base text-[var(--color-text-base)] opacity-90 leading-snug relative z-10'>
               {t('home.cards.card2.desc')}
             </p>
           </div>
 
           {/* Блок 3 */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
-            {/* Глянцевый блик при наведении */}
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-3.5 lg:p-4 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col justify-between cursor-default group hover:border-[var(--color-primary)]/50 transition-colors'>
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
-
             <div className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
-            <div className='flex items-center justify-between mb-2 lg:mb-3 relative z-10'>
-              <span className='font-mono text-[10px] uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
+            <div className='flex items-center justify-between mb-2 relative z-10'>
+              <span className='font-mono text-2xs uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
                 #SPEC-03
               </span>
               <svg
@@ -198,14 +186,14 @@ export const Home = () => {
             </div>
 
             <div className='relative z-10'>
-              <div className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
+              <div className='text-base lg:text-lg font-bold text-[var(--color-text-base)] font-mono mb-0.5'>
                 {t('home.cards.card3.title')}
               </div>
-              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5 lg:mb-2'>
+              <div className='text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] mb-1.5'>
                 {t('home.cards.card3.subtitle')}
               </div>
             </div>
-            <p className='text-[13px] text-[var(--color-text-base)] opacity-90 leading-snug relative z-10'>
+            <p className='text-sm lg:text-base text-[var(--color-text-base)] opacity-90 leading-snug relative z-10'>
               {t('home.cards.card3.desc')}
             </p>
           </div>
