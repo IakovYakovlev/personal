@@ -8,7 +8,6 @@ export const Home = () => {
   const navigate = useNavigate();
 
   return (
-    // На планшетах (md-lg) уменьшаем вертикальный паддинг, на десктопе возвращаем ваши py-12
     <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-4 lg:py-12 text-left'>
       <main className='w-full'>
         {/* Главный заголовок и контент: на планшетах уменьшаем нижний отступ */}
@@ -39,11 +38,11 @@ export const Home = () => {
                 onClick={() => navigate('/contact')}
                 type='button'
                 className='group/badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs md:text-sm font-semibold shadow-sm hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all cursor-pointer text-left'
-                title={t('home.statusTitle', 'Перейти к контактам')}
+                title={t('status.title', 'Перейти к контактам')}
               >
                 <span className='w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.6)] flex-shrink-0' />
                 <span className='group-hover/badge:underline decoration-emerald-500/50 underline-offset-2'>
-                  {t('home.status', 'Открыт к проектам по автоматизации и постоянному сотрудничеству')}
+                  {t('status.text', 'Открыт к проектам по автоматизации и постоянному сотрудничеству')}
                 </span>
                 <svg
                   className='w-3.5 h-3.5 opacity-0 group-hover/badge:opacity-100 transition-opacity -ml-1 text-emerald-600 dark:text-emerald-400 flex-shrink-0'
