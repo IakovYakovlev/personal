@@ -40,10 +40,13 @@
   "about": {
     "section": "Engineering Background",
     "title": "About Me",
-    "intro": "Fullstack Developer (C# / .NET · TypeScript / React) with 5+ years of commercial experience. I architect web-based automation systems and integrate AI solutions into core business workflows.",
-    "main": "I transitioned into IT from the real sector with solid hands-on experience in logistics. I designed and deployed an 'Electronic Customs Warehouse' system from scratch, automating routine operations, cutting operational costs by 50%, and achieving 100% financial tracking transparency.",
-    "highlight": "Currently, I am scaling this expertise into AI-driven document processing: building automated systems for scan and invoice recognition. Automating email data flows saves the team a full working week every month.",
-    "conclusion": "My domain experience in the real sector helps me design practical product logic, robust .NET architecture, and AI integrations — building software that solves concrete enterprise challenges and saves company resources.",
+    "block1_label": "// 01. PROFESSIONAL STACK",
+    "intro": "Fullstack Developer (C# / .NET · TypeScript / React) with 5+ years of commercial experience. I build robust web applications for business automation, architect scalable backend solutions, and deliver end-to-end user interfaces.",
+    "block2_label": "// 02. REAL-SECTOR EXPERIENCE & CASES",
+    "main": "I transitioned into IT from the real sector with solid hands-on experience in logistics. I designed and deployed a mission-critical 'Electronic Customs Warehouse' system from scratch, automating routine operations, cutting operational costs by 50%, and achieving 100% financial tracking transparency and accuracy.",
+    "highlight": "I am applying this engineering mindset to modern web applications, building automation modules and integrating AI tools for document and invoice processing. I help enterprises eliminate manual bottlenecks, spreadsheets, and human error for good.",
+    "block3_label": "// 03. ARCHITECTURAL APPROACH",
+    "conclusion": "A deep understanding of internal business operations allows me to build robust .NET backends, integrate modern React interfaces, and leverage practical AI tools. I deliver software solutions that directly solve enterprise challenges, optimize costs, and scale alongside the business.",
     "metrics": {
       "exp_value": "5+ years",
       "exp_label": "Dev Experience",
@@ -51,6 +54,11 @@
       "routine_label": "Cost Reduction",
       "ai_value": "AI & Docs",
       "ai_label": "Automation"
+    },
+    "cta": {
+      "label": "// NEXT STEP:",
+      "text": "Have an automation or project task?",
+      "btn": "Discuss task"
     }
   },
   "skills": {

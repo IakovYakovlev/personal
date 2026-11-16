@@ -2,20 +2,21 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import i18n from '../../../i18n';
 import avatar from '../../../assets/images/avatar.jpg';
+import { StatusBadge } from '../../components/StatusBadge';
 
 export const Home = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   return (
-    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-4 lg:py-12 text-left'>
+    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-4 text-left'>
       <main className='w-full'>
         {/* Главный заголовок и контент: на планшетах уменьшаем нижний отступ */}
         <div className='max-w-3xl mb-4 lg:mb-8'>
           {/* Шапка: Аватар + Кликабельный Статус */}
           <div className='flex items-center gap-4 sm:gap-5 mb-3 lg:mb-4'>
             {/* Круглый аватар с CAD-уголками и ховер-эффектами */}
-            <div className='relative w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 group cursor-pointer'>
+            <div className='relative w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 group'>
               <div className='w-full h-full rounded-full overflow-hidden border-4 border-[var(--color-primary)] shadow-md group-hover:shadow-[0_0_20px_rgba(var(--color-primary-rgb),0.5)] transition-all duration-300 bg-[var(--color-bg-muted)] relative'>
                 <img
                   src={avatar}
@@ -33,27 +34,7 @@ export const Home = () => {
             </div>
 
             {/* Блок кликабельного статуса (ведет на /contact) */}
-            <div className='flex-1'>
-              <button
-                onClick={() => navigate('/contact')}
-                type='button'
-                className='group/badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-700 dark:text-emerald-400 text-xs md:text-sm font-semibold shadow-sm hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all cursor-pointer text-left'
-                title={t('status.title', 'Перейти к контактам')}
-              >
-                <span className='w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.6)] flex-shrink-0' />
-                <span className='group-hover/badge:underline decoration-emerald-500/50 underline-offset-2'>
-                  {t('status.text', 'Открыт к проектам по автоматизации и постоянному сотрудничеству')}
-                </span>
-                <svg
-                  className='w-3.5 h-3.5 opacity-0 group-hover/badge:opacity-100 transition-opacity -ml-1 text-emerald-600 dark:text-emerald-400 flex-shrink-0'
-                  fill='none'
-                  stroke='currentColor'
-                  viewBox='0 0 24 24'
-                >
-                  <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M14 5l7 7m0 0l-7 7m7-7H3' />
-                </svg>
-              </button>
-            </div>
+            <StatusBadge />
           </div>
 
           <h1 className='text-3xl lg:text-5xl font-bold text-[var(--color-text-base)] tracking-tight leading-tight mb-2.5 lg:mb-4'>
