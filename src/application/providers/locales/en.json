@@ -1,6 +1,7 @@
 {
   "status": {
-    "text": "Open to automation projects and ongoing collaboration",
+    "text": "Open for automation projects and long-term collaboration",
+    "btn": "Contact me",
     "title": "Go to contacts"
   },
   "nav": {
@@ -40,16 +41,16 @@
   "about": {
     "section": "Engineering Background",
     "title": "About Me",
-    "block1_label": "// 01. PROFESSIONAL STACK",
-    "intro": "Fullstack Developer (C# / .NET · TypeScript / React) with 5+ years of commercial experience. I build robust web applications for business automation, architect scalable backend solutions, and deliver end-to-end user interfaces.",
-    "block2_label": "// 02. REAL-SECTOR EXPERIENCE & CASES",
-    "main": "I transitioned into IT from the real sector with solid hands-on experience in logistics. I designed and deployed a mission-critical 'Electronic Customs Warehouse' system from scratch, automating routine operations, cutting operational costs by 50%, and achieving 100% financial tracking transparency and accuracy.",
-    "highlight": "I am applying this engineering mindset to modern web applications, building automation modules and integrating AI tools for document and invoice processing. I help enterprises eliminate manual bottlenecks, spreadsheets, and human error for good.",
-    "block3_label": "// 03. ARCHITECTURAL APPROACH",
-    "conclusion": "A deep understanding of internal business operations allows me to build robust .NET backends, integrate modern React interfaces, and leverage practical AI tools. I deliver software solutions that directly solve enterprise challenges, optimize costs, and scale alongside the business.",
+    "block1_label": "// 01. STACK & PROFILE",
+    "intro": "Fullstack Developer (C# / .NET · TypeScript / React) with 5+ years of experience. I build robust web applications for business automation, architect systems, and deliver end-to-end user interfaces.",
+    "block2_label": "// 02. EXPERIENCE & CASES",
+    "main": "I transitioned into IT from logistics. I designed and deployed an 'Electronic Customs Warehouse' system from scratch, cutting operational costs by 50% and fully automating all accounting.",
+    "highlight": "I bring this experience to the web by building automation modules and AI tools for document processing, eliminating routine tasks and spreadsheets.",
+    "block3_label": "// 03. APPROACH",
+    "conclusion": "A deep understanding of business processes allows me to combine a solid .NET backend, modern React interfaces, and AI technologies into working products.",
     "metrics": {
       "exp_value": "5+ years",
-      "exp_label": "Dev Experience",
+      "exp_label": "Experience",
       "routine_value": "-50%",
       "routine_label": "Cost Reduction",
       "ai_value": "AI & Docs",
@@ -57,7 +58,7 @@
     },
     "cta": {
       "label": "// NEXT STEP:",
-      "text": "Have an automation or project task?",
+      "text": "Discuss your project or task?",
       "btn": "Discuss task"
     }
   },

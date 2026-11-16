@@ -8,7 +8,7 @@ export const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex-1 flex flex-col justify-start w-full max-w-6xl mx-auto px-6 md:px-12 py-3 lg:py-5 text-left overflow-hidden'>
+    <div className='flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-6 md:px-12 py-3 lg:py-5 text-left overflow-hidden'>
       <main className='w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start'>
         {/* ЛЕВАЯ КОЛОНКА (4): Фото с нахлестом + Метрики друг под другом */}
         <div className='lg:col-span-4 flex flex-col gap-3'>
@@ -43,7 +43,7 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Метрики друг под другом (вертикальная стопка) */}
+          {/* Метрики друг под другом */}
           <div className='max-w-[312px] mx-auto lg:mx-0 w-full flex flex-col gap-2 font-mono mt-5'>
             <div className='relative overflow-hidden bg-[var(--color-bg-muted)] p-2.5 rounded-xl border border-[var(--color-text-subtle)]/15 flex items-center justify-between group hover:border-[var(--color-primary)]/50 transition-colors'>
               <div className='absolute top-0 left-0 w-2.5 h-2.5 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
@@ -71,8 +71,8 @@ export const About = () => {
           </div>
         </div>
 
-        {/* ПРАВАЯ КОЛОНКА (8): Заголовок -> Статус-плашка -> Текстовые блоки -> CTA снизу */}
-        <div className='lg:col-span-8 flex flex-col justify-start space-y-3.5'>
+        {/* ПРАВАЯ КОЛОНКА (8): Увеличенный шрифт и лаконичный текст */}
+        <div className='lg:col-span-8 flex flex-col justify-start space-y-4'>
           {/* Общий заголовок секции */}
           <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider'>
             <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
@@ -83,7 +83,7 @@ export const About = () => {
             {t('about.title')}
           </h1>
 
-          {/* Плашка статуса под заголовком справа */}
+          {/* Плашка статуса */}
           <StatusBadge />
 
           {/* Блок 1: Профиль и стек */}
@@ -101,10 +101,10 @@ export const About = () => {
             <span className='font-mono text-[10px] text-[var(--color-text-subtle)] uppercase tracking-widest'>
               {t('about.block2_label')}
             </span>
-            <p className='text-xs md:text-sm text-[var(--color-text-muted)] leading-relaxed'>{t('about.main')}</p>
+            <p className='text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed'>{t('about.main')}</p>
 
-            <div className='relative bg-[var(--color-bg-muted)] p-3 rounded-xl border-l-4 border-[var(--color-primary)] shadow-sm'>
-              <p className='text-xs md:text-sm text-[var(--color-text-base)] italic leading-relaxed'>
+            <div className='relative bg-[var(--color-bg-muted)] p-3.5 rounded-xl border-l-4 border-[var(--color-primary)] shadow-sm'>
+              <p className='text-sm md:text-base text-[var(--color-text-base)] italic leading-relaxed'>
                 {t('about.highlight')}
               </p>
             </div>
@@ -115,20 +115,20 @@ export const About = () => {
             <span className='font-mono text-[10px] text-[var(--color-text-subtle)] uppercase tracking-widest'>
               {t('about.block3_label')}
             </span>
-            <p className='text-xs md:text-sm text-[var(--color-text-muted)] leading-relaxed'>{t('about.conclusion')}</p>
+            <p className='text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed'>
+              {t('about.conclusion')}
+            </p>
           </div>
 
           {/* CTA-ПЛАШКА СПРАВА СНИЗУ */}
-          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] px-4 py-3 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 font-mono text-xs mt-2 group'>
+          <div className='relative overflow-hidden bg-[var(--color-bg-muted)] px-4 py-3.5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 font-mono text-xs mt-3 group'>
             <div className='absolute top-0 left-0 w-2.5 h-2.5 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
             <div className='flex items-center gap-2 text-[var(--color-text-muted)]'>
-              {/* Добавлен whitespace-nowrap, чтобы // NEXT STEP: не разрывалось */}
               <span className='text-[var(--color-primary)] font-bold whitespace-nowrap'>{t('about.cta.label')}</span>
               <span>{t('about.cta.text')}</span>
             </div>
 
-            {/* Кнопка на мобильных по центру (w-full с justify-center), на десктопе auto */}
             <Link
               to='/contact'
               className='w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-[var(--color-primary)] text-white font-medium hover:bg-[var(--color-primary-dark)] transition-all cursor-pointer shadow-sm'
