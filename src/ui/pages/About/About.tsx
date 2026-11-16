@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import avatar from '../../../assets/images/avatar.jpg';
-import workspace from '../../../assets/images/workspace.jpg';
 import { StatusBadge } from '../../components/StatusBadge';
 
 export const About = () => {
@@ -25,20 +24,6 @@ export const About = () => {
                 #DEV-PROFILE / 01
               </div>
             </div>
-
-            {/* <div className='absolute -bottom-3 -right-7 w-2/3 max-w-[190px] aspect-[4/3] rounded-xl overflow-hidden border-2 border-[var(--color-primary)] shadow-lg bg-[var(--color-bg-muted)] z-20 group'>
-              <img
-                src={workspace}
-                alt='Workspace'
-                className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
-              />
-              <div className='absolute inset-0 bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-y-full group-hover:translate-y-full transition-transform duration-700 pointer-events-none' />
-
-              <div className='absolute bottom-0 inset-x-0 bg-[var(--color-bg-base)]/90 backdrop-blur-md px-2 py-0.5 border-t border-[var(--color-text-subtle)]/15 text-[8px] font-mono text-[var(--color-text-subtle)] flex justify-between items-center'>
-                <span>WORKSPACE</span>
-                <span className='text-[var(--color-primary)] font-bold'>● LIVE</span>
-              </div>
-            </div> */}
           </div>
 
           {/* Метрики */}
