@@ -12,6 +12,11 @@ export const Home = () => {
       <main className='w-full'>
         {/* Главный заголовок и контент */}
         <div className='max-w-3xl mb-3 lg:mb-5'>
+          <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2 lg:mb-3'>
+            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+            {t('home.section')}
+          </div>
+
           {/* Шапка: Аватар + Кликабельный Статус */}
           <div className='flex items-center gap-4 sm:gap-5 mb-3 lg:mb-4'>
             <div className='relative w-20 h-20 sm:w-28 sm:h-28 flex-shrink-0 group'>

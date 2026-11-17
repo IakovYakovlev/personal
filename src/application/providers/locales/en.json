@@ -13,6 +13,7 @@
     "contact": "Contact"
   },
   "home": {
+    "section": "Engineering Profile",
     "role": "Reliable Web Services",
     "description": "Fullstack web developer with 5+ years of experience. I specialize in business automation and building reliable digital solutions. I turn chaotic spreadsheet accounting and manual workflows into smooth, efficient systems — built with intuitive user interfaces and solid architecture.",
     "cta": {
@@ -63,14 +64,19 @@
     }
   },
   "skills": {
+    "section": "Technical Skills",
     "title": "Skills",
+    "appliedIn": "Applied in",
     "intro": "I use a technology stack that covers the key aspects of development: creating user-friendly interfaces, reliable server-side systems, and efficient databases.",
     "categories": {
       "frontend": {
         "title": "Frontend",
+        "description": "Building the dashboard and responsive user-facing workflows.",
+        "projects": ["personal-ops-center"],
         "skills": [
           "TypeScript",
           "React",
+          "Next.js",
           "Vite",
           "MobX",
           "HTML5",
@@ -80,9 +86,12 @@
       },
       "backend": {
         "title": "Backend",
+        "description": "Implementing authentication, APIs, and asynchronous services.",
+        "projects": ["personal-ops-center", "docsense-api", "docsense-ai"],
         "skills": [
           "C#",
           "ASP.NET",
+          "NestJS",
           "Entity Framework",
           "REST API",
           "LINQ",
@@ -91,15 +100,20 @@
       },
       "database": {
         "title": "Databases",
+        "description": "Modeling persistent data and supporting queues and caching.",
+        "projects": ["personal-ops-center", "docsense-api", "docsense-ai"],
         "skills": [
           "SQL",
           "SQL Server",
           "MySQL",
+          "PostgreSQL",
+          "Redis",
           "Database Design"
         ]
       },
       "tools": {
         "title": "Tools & Practices",
+        "description": "Version control, development environments, and API testing.",
         "skills": [
           "Git",
           "GitHub",
@@ -109,11 +123,19 @@
           "Figma"
         ]
       }
+    },
+    "cta": {
+      "label": "// NEXT STEP:",
+      "text": "Let’s discuss how I can help.",
+      "btn": "Get in touch"
     }
   },
   "contact": {
+    "section": "Get in Touch",
     "title": "Contact",
     "intro": "I’ll be glad to discuss projects, ideas, or opportunities for collaboration. You can reach me in any convenient way:",
+    "copyEmail": "Copy email address",
+    "emailCopied": "Email address copied",
     "methods": {
       "email": "Email",
       "github": "GitHub",
@@ -122,21 +144,63 @@
     }
   },
   "projects": {
+    "section": "Selected Work",
+    "projectLabel": "PROJECT",
+    "demo": "Demo",
+    "featuredLabel": "Featured Project",
+    "case": {
+      "goal": "Goal",
+      "implementation": "Implemented",
+      "result": "Result",
+      "status": "Current Status"
+    },
+    "gallery": {
+      "open": "View screenshots",
+      "close": "Close gallery",
+      "previous": "Previous screenshot",
+      "next": "Next screenshot",
+      "counter": "{{current}} of {{total}}",
+      "goToImage": "Go to screenshot",
+      "thumbnails": "Screenshot thumbnails",
+      "placeholder": "Preview placeholder",
+      "screenshots": {
+        "dashboard": {
+          "caption": "Dashboard overview",
+          "alt": "Illustrative dashboard placeholder, not a real project screenshot"
+        },
+        "documents": {
+          "caption": "Document processing",
+          "alt": "Illustrative document workflow placeholder, not a real project screenshot"
+        },
+        "services": {
+          "caption": "Service roadmap",
+          "alt": "Illustrative service overview placeholder, not a real project screenshot"
+        }
+      }
+    },
     "title": "Projects",
     "intro": "For me, projects are not only about learning and finding solutions, but also about creating things that truly help people and businesses. This real value is what makes them important. Here are some of my projects:",
     "list": [
       {
+        "id": "personal-ops-center",
         "title": "Personal Ops Center",
-        "description": "A fullstack microservices platform with a Next.js dashboard and two production services: Identity Service (JWT auth) and Doc Intelligence (asynchronous AI document processing). Uses secure BFF proxy routes with httpOnly cookies. Deployed publicly on Railway.",
+        "description": "A personal fullstack ecosystem with a Next.js dashboard, identity management, and AI-assisted document processing.",
+        "goal": "Build a unified engineering ecosystem with a dashboard and five cooperating microservices.",
+        "implementation": "The Next.js dashboard is integrated with Identity Service and Doc Intelligence. The current workflow includes JWT authentication and asynchronous PDF/DOCX processing with BullMQ and Redis.",
+        "result": "The core authenticated dashboard and document-processing workflow are integrated, establishing the foundation for the remaining services.",
+        "status": "Integrated: Identity Service and Doc Intelligence. In progress: Neural Assistant. Planned: Data Forge and Insight Aggregator.",
         "tech": [
-          "Next.js",
+          "Next.js 16",
+          "Tailwind CSS",
+          "shadcn/ui",
           "NestJS",
           "TypeScript",
           "TanStack Query",
           "JWT",
+          "BullMQ",
           "Redis",
           "PostgreSQL",
-          "Railway"
+          "Prisma"
         ],
         "links": {
           "github": "https://github.com/IakovYakovlev/personal-ops-center.git",
@@ -144,6 +208,7 @@
         }
       },
       {
+        "id": "docsense-api",
         "title": "DocSense API (.NET)",
         "description": "A backend API for intelligent document processing and AI-powered analysis. Built with ASP.NET Core and EF Core, featuring file upload handling, background job processing, usage limits, and Swagger documentation for easy integration and testing.",
         "tech": [
@@ -161,6 +226,7 @@
         }
       },
       {
+        "id": "docsense-ai",
         "title": "DocSense AI (MVP)",
         "description": "An intelligent document analysis system. Built with a modular architecture, it leverages AI for insights and Redis for high-performance data caching. Includes full Swagger documentation.",
         "tech": [
@@ -177,7 +243,11 @@
         }
       }
     ],
-    "cta": "Want to discuss a project? Get in touch with me"
+    "cta": {
+      "label": "// NEXT STEP:",
+      "text": "Want to discuss a project?",
+      "btn": "Get in touch"
+    }
   },
   "footer": {
     "tagline": "Building reliable and user-friendly solutions"

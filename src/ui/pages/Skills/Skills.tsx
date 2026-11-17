@@ -1,7 +1,10 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faServer, faDatabase, faWrench } from '@fortawesome/free-solid-svg-icons';
 import { type IconProp } from '@fortawesome/fontawesome-svg-core';
+import { StatusBadge } from '../../components/StatusBadge';
+import { ContactCta } from '../../components/Contact/ContactCta';
 
 const categoryIcons: Record<string, IconProp> = {
   frontend: faCode,
@@ -15,41 +18,83 @@ export const Skills = () => {
 
   const categories = t('skills.categories', { returnObjects: true }) as Record<
     string,
-    { title: string; skills: string[] }
+    { title: string; description: string; skills: string[]; projects?: string[] }
   >;
+  const projects = t('projects.list', { returnObjects: true }) as { id: string; title: string }[];
 
   return (
-    <section className='flex flex-col items-center justify-center px-6 text-center flex-1'>
-      <h1 className='text-4xl md:text-6xl font-bold mb-6 text-primary'>{t('skills.title')}</h1>
-
-      <p className='text-lg md:text-xl text-text-base max-w-3xl mb-12'>{t('skills.intro')}</p>
-
-      <div className='grid md:grid-cols-2 gap-10 max-w-5xl w-full'>
-        {Object.entries(categories).map(([key, { title, skills }]) => (
-          <div
-            key={key}
-            className='bg-bg-muted dark:bg-bg-alt rounded-lg shadow-md p-6 text-left flex flex-col items-start'
-          >
-            {/* Заголовок с иконкой */}
-            <h2 className='flex items-center gap-3 text-2xl font-semibold mb-4 text-primary'>
-              <FontAwesomeIcon icon={categoryIcons[key]} />
-              {title}
-            </h2>
-
-            {/* Навыки-бейджи */}
-            <div className='flex flex-wrap gap-3'>
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className='px-4 py-2 rounded bg-primary/10 text-primary font-medium hover:bg-primary hover:text-white transition cursor-default'
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+    <div className='flex-1 w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3'>
+      <main className='w-full'>
+        <div className='max-w-3xl mb-5 lg:mb-7'>
+          <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2'>
+            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+            {t('skills.section')}
           </div>
-        ))}
-      </div>
-    </section>
+          <h1 className='text-3xl md:text-4xl font-bold text-[var(--color-text-base)] tracking-tight mb-2'>
+            {t('skills.title')}
+          </h1>
+          <StatusBadge className='my-3 lg:my-4' />
+          <p className='text-base lg:text-lg text-[var(--color-text-muted)] leading-relaxed'>{t('skills.intro')}</p>
+        </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-3.5 lg:gap-5'>
+          {Object.entries(categories).map(([key, { title, description, skills, projects: projectIds }], index) => (
+            <section
+              key={key}
+              className='relative overflow-hidden bg-[var(--color-bg-muted)] p-4 lg:p-5 rounded-xl border border-[var(--color-text-subtle)]/15 flex flex-col group hover:border-[var(--color-primary)]/50 transition-colors'
+            >
+              <span className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
+
+              <div className='flex items-center justify-between mb-4'>
+                <span className='font-mono text-2xs uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
+                  {`// ${String(index + 1).padStart(2, '0')}`}
+                </span>
+                <FontAwesomeIcon icon={categoryIcons[key]} className='text-[var(--color-primary)]/70' />
+              </div>
+
+              <h2 className='mb-1 text-lg font-bold text-[var(--color-text-base)] lg:text-xl'>{title}</h2>
+              <p className='mb-3 text-sm leading-relaxed text-[var(--color-text-muted)]'>{description}</p>
+              <div className='flex flex-wrap gap-2'>
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className='px-2.5 py-1.5 rounded-lg bg-[var(--color-bg-base)] border border-[var(--color-text-subtle)]/15 text-sm font-medium text-[var(--color-text-muted)] hover:border-[var(--color-primary)]/40 hover:text-[var(--color-primary)] transition-colors cursor-default'
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              {projectIds && projectIds.length > 0 && (
+                <div className='mt-4 border-t border-[var(--color-text-subtle)]/15 pt-3'>
+                  <p className='mb-2 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-text-subtle)]'>
+                    {t('skills.appliedIn')}
+                  </p>
+                  <div className='flex flex-wrap gap-2'>
+                    {projectIds.map((projectId) => {
+                      const project = projects.find(({ id }) => id === projectId);
+
+                      return project ? (
+                        <Link
+                          key={project.id}
+                          to={`/projects#${project.id}`}
+                          className='rounded-lg border border-[var(--color-primary)]/25 px-2.5 py-1 text-xs font-medium text-[var(--color-primary)] transition-colors hover:border-[var(--color-primary)]/60 hover:bg-[var(--color-primary)]/5'
+                        >
+                          {project.title}
+                        </Link>
+                      ) : null;
+                    })}
+                  </div>
+                </div>
+              )}
+            </section>
+          ))}
+        </div>
+
+        <div className='mt-5 lg:mt-7'>
+          <ContactCta label={t('skills.cta.label')} text={t('skills.cta.text')} buttonLabel={t('skills.cta.btn')} />
+        </div>
+      </main>
+    </div>
   );
 };

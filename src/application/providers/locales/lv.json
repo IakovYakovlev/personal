@@ -7,33 +7,79 @@
     "skills": "Prasmes",
     "contact": "Kontakti"
   },
+  "status": {
+    "text": "Atvērts automatizācijas projektiem un ilgtermiņa sadarbībai",
+    "btn": "Sazināties",
+    "title": "Pāriet uz kontaktinformāciju"
+  },
   "home": {
+    "section": "Inženiera profils",
+    "role": "Uzticami tīmekļa risinājumi",
+    "description": "Fullstack izstrādātājs ar vairāk nekā 5 gadu pieredzi. Specializējos biznesa procesu automatizācijā un uzticamu digitālo risinājumu izstrādē. Pārvēršu sarežģītu uzskaiti izklājlapās un manuālus procesus pārskatāmās sistēmās ar ērtu saskarni un stabilu arhitektūru.",
     "welcome": "Laipni lūgti 👋",
     "greeting": "Priecājos jūs redzēt manā portfolio!",
     "slogan": "No idejām līdz strādājošam produktam.",
-    "description": "Esmu izstrādātājs, kas specializējas <1>TypeScript</1> un <3>C#</3>. Palīdzu uzņēmumiem un komandām veidot ātras, uzticamas un modernas tīmekļa lietotnes, API un skaistas saskarnes.",
     "cta": {
       "projects": "Skatīt projektus",
       "about": "Uzzināt vairāk par mani",
       "resume": "Lejupielādēt CV"
+    },
+    "cards": {
+      "card1": {
+        "title": "5+ gadi",
+        "subtitle": "Fullstack izstrāde",
+        "desc": "Uzticama .NET servera loģika un React lietotāja saskarnes"
+      },
+      "card2": {
+        "title": "Automatizācija",
+        "subtitle": "Excel un mantoto sistēmu nomaiņa",
+        "desc": "Darbības uzskaites pārvēršana ātrās un uzticamās tīmekļa sistēmās"
+      },
+      "card3": {
+        "title": "Pilns cikls",
+        "subtitle": "Risinājumi no sākuma līdz beigām",
+        "desc": "Projekta virzība no biznesa procesu analīzes līdz ieviešanai un atbalstam"
+      }
     }
   },
   "about": {
+    "section": "Inženiertehniskā pieredze",
     "title": "Par mani",
+    "block1_label": "// 01. TEHNOLOĢIJAS UN PROFILS",
     "intro": "Sveiki! Esmu Fullstack izstrādātājs (C# / React / Node.js) ar specializāciju mākslīgā intelekta (AI) integrācijā un viedo tīmekļa lietotņu izstrādē. Mans galvenais fokuss ir mūsdienīgu AI risinājumu radīšana, kas automatizē darbu ar datiem, vienkāršo procesus un veicina biznesa izaugsmi.",
+    "block2_label": "// 02. PIEREDZE UN PROJEKTI",
     "main": "Mans ceļš ir unikāls ar to, ka ienācu IT no reālā sektora. Strādājot loģistikā, es izstrādāju un ieviesu 'Elektroniskās muitas noliktavas' sistēmu. Šis projekts ļāva automatizēt ikdienas rutīnu un optimizēt operāciju nodaļas štatu par 50%, kā arī nodrošināja 100% rēķinu izrakstīšanas kontroli un pārskatāmību, pilnībā novēršot uzņēmuma negūtos ieņēmumus.",
     "highlight": "Pašlaik es mērogoju šo pieredzi, ieviešot AI dokumentu atpazīšanai. Mans risinājums automātiski atlasa datus no skenētiem dokumentiem un rēķiniem, kas saņemti e-pastā. Tas pilnībā atbrīvo darbiniekus no manuālas datu ievades, kam iepriekš tika tērēta vesela darba nedēļa katru mēnesi.",
-    "conclusion": "Šodien es apvienoju produktu dizainu, uzticamu servera arhitektūru un AI iespējas, lai radītu produktus, kas patiešām sniedz vērtību. Mana pieredze loģistikā palīdz man dziļāk izprast biznesa problēmas un runāt ar pasūtītājiem vienā valodā."
+    "block3_label": "// 03. PIEEJA",
+    "conclusion": "Šodien es apvienoju produktu dizainu, uzticamu servera arhitektūru un AI iespējas, lai radītu produktus, kas patiešām sniedz vērtību. Mana pieredze loģistikā palīdz man dziļāk izprast biznesa problēmas un runāt ar pasūtītājiem vienā valodā.",
+    "metrics": {
+      "exp_value": "5+ gadi",
+      "exp_label": "Pieredze",
+      "routine_value": "-50%",
+      "routine_label": "Izmaksu samazinājums",
+      "ai_value": "AI un dokumenti",
+      "ai_label": "Automatizācija"
+    },
+    "cta": {
+      "label": "// NĀKAMAIS SOLIS:",
+      "text": "Apspriedīsim jūsu projektu vai uzdevumu?",
+      "btn": "Apspriest uzdevumu"
+    }
   },
   "skills": {
+    "section": "Tehniskās prasmes",
     "title": "Prasmes",
+    "appliedIn": "Izmantots projektos",
     "intro": "Izmantoju tehnoloģiju steku, kas palīdz risināt galvenos izstrādes uzdevumus: veidot ērtas lietotāja saskarnes, uzticamu servera daļu un efektīvas datubāzes.",
     "categories": {
       "frontend": {
         "title": "Frontend",
+        "description": "Dashboard saskarnes un pielāgojamu lietotāja scenāriju izstrāde.",
+        "projects": ["personal-ops-center"],
         "skills": [
           "TypeScript",
           "React",
+          "Next.js",
           "Vite",
           "MobX",
           "HTML5",
@@ -43,9 +89,12 @@
       },
       "backend": {
         "title": "Backend",
+        "description": "Autentifikācija, API un asinhroni servisi.",
+        "projects": ["personal-ops-center", "docsense-api", "docsense-ai"],
         "skills": [
           "C#",
           "ASP.NET",
+          "NestJS",
           "Entity Framework",
           "REST API",
           "LINQ",
@@ -54,15 +103,20 @@
       },
       "database": {
         "title": "Datubāzes",
+        "description": "Datu modelēšana, uzdevumu rindas un kešatmiņa.",
+        "projects": ["personal-ops-center", "docsense-api", "docsense-ai"],
         "skills": [
           "SQL",
           "SQL Server",
           "MySQL",
+          "PostgreSQL",
+          "Redis",
           "Database Design"
         ]
       },
       "tools": {
         "title": "Rīki un prakses",
+        "description": "Versiju kontrole, izstrādes vides un API pārbaude.",
         "skills": [
           "Git",
           "GitHub",
@@ -72,11 +126,19 @@
           "Figma"
         ]
       }
+    },
+    "cta": {
+      "label": "// NĀKAMAIS SOLIS:",
+      "text": "Apspriedīsim, kā varu palīdzēt.",
+      "btn": "Sazināties"
     }
   },
   "contact": {
+    "section": "Sazinieties ar mani",
     "title": "Kontakti",
     "intro": "Būšu priecīgs apspriest projektus, idejas vai sadarbības iespējas. Ar mani var sazināties jebkurā ērtā veidā:",
+    "copyEmail": "Kopēt e-pasta adresi",
+    "emailCopied": "E-pasta adrese nokopēta",
     "methods": {
       "email": "E-pasts",
       "github": "GitHub",
@@ -85,21 +147,63 @@
     }
   },
   "projects": {
+    "section": "Atlasītie projekti",
+    "projectLabel": "PROJEKTS",
+    "demo": "Demonstrācija",
+    "featuredLabel": "Galvenais projekts",
+    "case": {
+      "goal": "Mērķis",
+      "implementation": "Izstrādāts",
+      "result": "Rezultāts",
+      "status": "Pašreizējais statuss"
+    },
+    "gallery": {
+      "open": "Skatīt ekrānuzņēmumus",
+      "close": "Aizvērt galeriju",
+      "previous": "Iepriekšējais ekrānuzņēmums",
+      "next": "Nākamais ekrānuzņēmums",
+      "counter": "{{current}} no {{total}}",
+      "goToImage": "Pāriet uz ekrānuzņēmumu",
+      "thumbnails": "Ekrānuzņēmumu sīktēli",
+      "placeholder": "Vietturis — aizstājiet ar ekrānuzņēmumu",
+      "screenshots": {
+        "dashboard": {
+          "caption": "Dashboard pārskats",
+          "alt": "Ilustratīvs Dashboard vietturis, nevis īsts projekta ekrānuzņēmums"
+        },
+        "documents": {
+          "caption": "Dokumentu apstrāde",
+          "alt": "Ilustratīvs dokumentu apstrādes vietturis, nevis īsts projekta ekrānuzņēmums"
+        },
+        "services": {
+          "caption": "Servisu ceļvedis",
+          "alt": "Ilustratīvs servisu pārskata vietturis, nevis īsts projekta ekrānuzņēmums"
+        }
+      }
+    },
     "title": "Projekti",
     "intro": "Projekti man ir ne tikai mācību process un risinājumu meklēšana, bet arī iespēja radīt lietas, kas patiešām palīdz cilvēkiem un uzņēmumiem. Tieši šī vērtība padara tos nozīmīgus. Šeit ir daži no maniem projektiem:",
     "list": [
       {
+        "id": "personal-ops-center",
         "title": "Personal Ops Center",
-        "description": "Pilna cikla mikropakalpojumu platforma ar Next.js paneli un diviem produkcijā strādājošiem servisiem: Identity Service (JWT autentifikācija) un Doc Intelligence (asinhrona AI dokumentu apstrāde). Izmanto drošu BFF pieeju ar route handlers un httpOnly sīkdatnēm. Projekts ir publiski izvietots Railway.",
+        "description": "Personīga fullstack ekosistēma ar Next.js Dashboard, identitātes pārvaldību un dokumentu analīzi ar AI.",
+        "goal": "Izveidot vienotu inženiertehnisku ekosistēmu ar Dashboard un pieciem savstarpēji saistītiem mikropakalpojumiem.",
+        "implementation": "Next.js Dashboard ir integrēts ar Identity Service un Doc Intelligence. Pašreizējā plūsma ietver JWT autentifikāciju un PDF/DOCX asinhronu apstrādi ar BullMQ un Redis.",
+        "result": "Galvenā autentificētā Dashboard un dokumentu apstrādes plūsma ir integrēta, veidojot pamatu pārējiem servisiem.",
+        "status": "Integrēts: Identity Service un Doc Intelligence. Izstrādē: Neural Assistant. Plānots: Data Forge un Insight Aggregator.",
         "tech": [
-          "Next.js",
+          "Next.js 16",
+          "Tailwind CSS",
+          "shadcn/ui",
           "NestJS",
           "TypeScript",
           "TanStack Query",
           "JWT",
+          "BullMQ",
           "Redis",
           "PostgreSQL",
-          "Railway"
+          "Prisma"
         ],
         "links": {
           "github": "https://github.com/IakovYakovlev/personal-ops-center.git",
@@ -107,6 +211,7 @@
         }
       },
       {
+        "id": "docsense-api",
         "title": "DocSense API (.NET)",
         "description": "Backend API inteliģentai dokumentu apstrādei un ar AI balstītai analīzei. Izstrādāts ar ASP.NET Core un EF Core; ietver failu augšupielādi, fona uzdevumu apstrādi, lietošanas limitus un Swagger dokumentāciju ērtai integrācijai un testēšanai.",
         "tech": [
@@ -124,6 +229,7 @@
         }
       },
       {
+        "id": "docsense-ai",
         "title": "DocSense AI (MVP)",
         "description": "Inteliģenta dokumentu analīzes sistēma. Izstrādāta ar modulāru arhitektūru, izmanto AI datu apstrādei un Redis augstas veiktspējas kešatmiņai.",
         "tech": [
@@ -140,7 +246,11 @@
         }
       }
     ],
-    "cta": "Vai vēlaties apspriest projektu? Sazinieties ar mani"
+    "cta": {
+      "label": "// NĀKAMAIS SOLIS:",
+      "text": "Vai vēlaties apspriest projektu?",
+      "btn": "Sazināties"
+    }
   },
   "footer": {
     "tagline": "Veidoju uzticamus un ērtus risinājumus"

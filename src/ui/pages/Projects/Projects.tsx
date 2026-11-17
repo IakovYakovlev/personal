@@ -1,88 +1,210 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import { StatusBadge } from '../../components/StatusBadge';
+import { ContactCta } from '../../components/Contact/ContactCta';
+import { ProjectGallery } from './ProjectGallery';
+import { projectMedia } from './projectMedia';
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  tech: string[];
+  links: { github?: string; demo?: string | null };
+  goal?: string;
+  implementation?: string;
+  result?: string;
+  status?: string;
+}
 
 export const Projects = () => {
   const { t } = useTranslation();
+  const { hash } = useLocation();
 
-  // Загружаем список проектов из i18n
-  const projects = t('projects.list', { returnObjects: true }) as {
-    title: string;
-    description: string;
-    tech: string[];
-    links: { github?: string; demo?: string | null };
-  }[];
+  const projects = t('projects.list', { returnObjects: true }) as Project[];
+  const featuredProject = projects.find((project) => project.id === 'personal-ops-center');
+  const supportingProjects = projects.filter((project) => project.id !== 'personal-ops-center');
+  const featuredScreenshots = featuredProject ? (projectMedia[featuredProject.id] ?? []) : [];
+
+  useEffect(() => {
+    if (!hash) {
+      return;
+    }
+
+    document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [hash]);
 
   return (
-    <section className='flex flex-col items-center text-center flex-1 px-6 py-10 '>
-      {/* Заголовок */}
-      <h1 className='text-4xl md:text-6xl font-bold mb-6 text-primary'>{t('projects.title')}</h1>
-
-      {/* Вступление */}
-      <p className='text-lg md:text-xl text-text-muted max-w-3xl mb-10'>{t('projects.intro')}</p>
-
-      {/* Список проектов */}
-      <div className='flex flex-wrap justify-center gap-8 max-w-5xl w-full'>
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className='flex flex-col bg-bg-muted dark:bg-bg-alt p-6 rounded-lg shadow-md text-left w-full max-w-md'
-          >
-            {/* Заголовок */}
-            <h2 className='text-2xl font-semibold text-primary mb-3'>{project.title}</h2>
-
-            {/* Описание */}
-            <p className='text-text-base mb-4'>{project.description}</p>
-
-            {/* Технологии */}
-            <div className='flex flex-wrap gap-2 mb-4 mt-auto'>
-              {project.tech.map((tech) => (
-                <span key={tech} className='px-3 py-1 text-sm rounded bg-bg-base text-text-subtle border border-bg-alt'>
-                  {tech}
-                </span>
-              ))}
-            </div>
-
-            {/* Ссылки */}
-            <div className='flex gap-4 mt-auto'>
-              {project.links.github && (
-                <a
-                  href={project.links.github}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex items-center gap-2 text-primary hover:text-primary-light transition'
-                >
-                  <FontAwesomeIcon icon={faGithub} />
-                  <span>GitHub</span>
-                </a>
-              )}
-              {project.links.demo && (
-                <a
-                  href={project.links.demo}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex items-center gap-2 text-primary hover:text-primary-light transition'
-                >
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                  <span>Demo</span>
-                </a>
-              )}
-            </div>
+    <div className='flex-1 w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3'>
+      <main className='w-full'>
+        <div className='max-w-3xl mb-5 lg:mb-7'>
+          <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2'>
+            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+            {t('projects.section')}
           </div>
-        ))}
-      </div>
+          <h1 className='text-3xl md:text-4xl font-bold text-[var(--color-text-base)] tracking-tight mb-2'>
+            {t('projects.title')}
+          </h1>
 
-      {/* CTA */}
-      <div className='mt-12'>
-        <Link
-          to='/contact'
-          className='inline-block text-center px-6 py-3 sm:px-6 sm:py-3 px-4 py-2 rounded bg-primary text-white font-semibold hover:bg-primary-light transition text-sm sm:text-base'
-        >
-          {t('projects.cta')}
-        </Link>
-      </div>
-    </section>
+          <StatusBadge className='my-3 lg:my-4' />
+
+          <p className='text-base lg:text-lg text-[var(--color-text-muted)] leading-relaxed'>{t('projects.intro')}</p>
+        </div>
+
+        {featuredProject && (
+          <article
+            id={featuredProject.id}
+            className='relative mb-5 overflow-hidden rounded-xl border border-[var(--color-primary)]/35 bg-[var(--color-bg-muted)] p-4 shadow-sm scroll-mt-24 md:p-6 lg:mb-7'
+          >
+            <span className='absolute left-0 top-0 h-4 w-4 rounded-tl-xl border-l-2 border-t-2 border-[var(--color-primary)]/60' />
+            <div className={`grid grid-cols-1 gap-6 ${featuredScreenshots.length > 0 ? 'lg:grid-cols-2' : ''}`}>
+              <div>
+                <div className='mb-3 flex flex-wrap items-center justify-between gap-2'>
+                  <span className='rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-3 py-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
+                    {t('projects.featuredLabel')}
+                  </span>
+                  <span className='font-mono text-2xs uppercase tracking-widest text-[var(--color-text-subtle)]'>
+                    #{t('projects.projectLabel')}-01
+                  </span>
+                </div>
+
+                <h2 className='mb-2 text-xl font-bold text-[var(--color-text-base)] lg:text-2xl'>
+                  {featuredProject.title}
+                </h2>
+                <p className='mb-4 text-sm leading-relaxed text-[var(--color-text-muted)] lg:text-base'>
+                  {featuredProject.description}
+                </p>
+
+                <div className='grid gap-3 sm:grid-cols-2'>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                    <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
+                      {t('projects.case.goal')}
+                    </h3>
+                    <p className='text-sm leading-relaxed text-[var(--color-text-muted)]'>{featuredProject.goal}</p>
+                  </div>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                    <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
+                      {t('projects.case.implementation')}
+                    </h3>
+                    <p className='text-sm leading-relaxed text-[var(--color-text-muted)]'>
+                      {featuredProject.implementation}
+                    </p>
+                  </div>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                    <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
+                      {t('projects.case.result')}
+                    </h3>
+                    <p className='text-sm leading-relaxed text-[var(--color-text-muted)]'>{featuredProject.result}</p>
+                  </div>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                    <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
+                      {t('projects.case.status')}
+                    </h3>
+                    <p className='text-sm leading-relaxed text-[var(--color-text-muted)]'>{featuredProject.status}</p>
+                  </div>
+                </div>
+
+                <div className='mt-4 flex flex-wrap gap-2'>
+                  {featuredProject.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)] px-2.5 py-1 font-mono text-2xs text-[var(--color-text-subtle)]'
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {featuredProject.links.github && (
+                  <a
+                    href={featuredProject.links.github}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]'
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                    <span>GitHub</span>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-xs' />
+                  </a>
+                )}
+              </div>
+
+              {featuredScreenshots.length > 0 && <ProjectGallery screenshots={featuredScreenshots} />}
+            </div>
+          </article>
+        )}
+
+        <div className='grid grid-cols-1 gap-3.5 md:grid-cols-2 lg:gap-5'>
+          {supportingProjects.map((project, index) => (
+            <article
+              key={project.id}
+              id={project.id}
+              className='group relative scroll-mt-24 overflow-hidden rounded-xl border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-muted)] p-4 transition-colors hover:border-[var(--color-primary)]/50 lg:p-5'
+            >
+              <span className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
+
+              <div className='flex items-center justify-between mb-3 font-mono text-2xs uppercase tracking-widest text-[var(--color-text-subtle)] opacity-70'>
+                <span>
+                  #{t('projects.projectLabel')}-{String(index + 2).padStart(2, '0')}
+                </span>
+              </div>
+
+              <h2 className='text-lg lg:text-xl font-bold text-[var(--color-text-base)] mb-2'>{project.title}</h2>
+              <p className='text-sm lg:text-base text-[var(--color-text-muted)] leading-relaxed mb-4'>
+                {project.description}
+              </p>
+
+              <div className='flex flex-wrap gap-2 mb-4'>
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className='px-2.5 py-1 text-2xs font-mono rounded-lg bg-[var(--color-bg-base)] text-[var(--color-text-subtle)] border border-[var(--color-text-subtle)]/15'
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <div className='flex flex-wrap gap-3 mt-auto pt-3 border-t border-[var(--color-text-subtle)]/15'>
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition-colors'
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                    <span>GitHub</span>
+                  </a>
+                )}
+                {project.links.demo && (
+                  <a
+                    href={project.links.demo}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition-colors'
+                  >
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    <span>{t('projects.demo')}</span>
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className='mt-5 lg:mt-7'>
+          <ContactCta
+            label={t('projects.cta.label')}
+            text={t('projects.cta.text')}
+            buttonLabel={t('projects.cta.btn')}
+          />
+        </div>
+      </main>
+    </div>
   );
 };
