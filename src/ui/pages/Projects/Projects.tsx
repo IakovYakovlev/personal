@@ -61,7 +61,7 @@ export const Projects = () => {
             className='relative mb-5 overflow-hidden rounded-xl border border-[var(--color-primary)]/35 bg-[var(--color-bg-muted)] p-4 shadow-sm scroll-mt-24 md:p-6 lg:mb-7'
           >
             <span className='absolute left-0 top-0 h-4 w-4 rounded-tl-xl border-l-2 border-t-2 border-[var(--color-primary)]/60' />
-            <div className={`grid grid-cols-1 gap-6 ${featuredScreenshots.length > 0 ? 'lg:grid-cols-2' : ''}`}>
+            <div>
               <div>
                 <div className='mb-3 flex flex-wrap items-center justify-between gap-2'>
                   <span className='rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-3 py-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
@@ -80,13 +80,13 @@ export const Projects = () => {
                 </p>
 
                 <div className='grid gap-3 sm:grid-cols-2'>
-                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3 shadow-lg shadow-black/5'>
                     <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
                       {t('projects.case.goal')}
                     </h3>
                     <p className='text-sm leading-relaxed text-[var(--color-text-muted)]'>{featuredProject.goal}</p>
                   </div>
-                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3 shadow-lg shadow-black/5'>
                     <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
                       {t('projects.case.implementation')}
                     </h3>
@@ -94,13 +94,13 @@ export const Projects = () => {
                       {featuredProject.implementation}
                     </p>
                   </div>
-                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3 shadow-lg shadow-black/5'>
                     <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
                       {t('projects.case.result')}
                     </h3>
                     <p className='text-sm leading-relaxed text-[var(--color-text-muted)]'>{featuredProject.result}</p>
                   </div>
-                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3'>
+                  <div className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)]/60 p-3 shadow-lg shadow-black/5'>
                     <h3 className='mb-1 font-mono text-2xs font-bold uppercase tracking-wider text-[var(--color-primary)]'>
                       {t('projects.case.status')}
                     </h3>
@@ -119,21 +119,22 @@ export const Projects = () => {
                   ))}
                 </div>
 
-                {featuredProject.links.github && (
-                  <a
-                    href={featuredProject.links.github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]'
-                  >
-                    <FontAwesomeIcon icon={faGithub} />
-                    <span>GitHub</span>
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-xs' />
-                  </a>
-                )}
+                <div className='mt-4 flex flex-wrap items-center gap-x-5 gap-y-3'>
+                  {featuredProject.links.github && (
+                    <a
+                      href={featuredProject.links.github}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-dark)]'
+                    >
+                      <FontAwesomeIcon icon={faGithub} />
+                      <span>GitHub</span>
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} className='text-xs' />
+                    </a>
+                  )}
+                  {featuredScreenshots.length > 0 && <ProjectGallery screenshots={featuredScreenshots} />}
+                </div>
               </div>
-
-              {featuredScreenshots.length > 0 && <ProjectGallery screenshots={featuredScreenshots} />}
             </div>
           </article>
         )}

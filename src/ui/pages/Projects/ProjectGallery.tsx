@@ -1,5 +1,7 @@
 import { useRef, useState, type KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImages } from '@fortawesome/free-solid-svg-icons';
 import type { ProjectScreenshot } from './projectMedia';
 
 interface ProjectGalleryProps {
@@ -43,22 +45,11 @@ export const ProjectGallery = ({ screenshots }: ProjectGalleryProps) => {
       <button
         type='button'
         onClick={() => dialogRef.current?.showModal()}
-        aria-label={t('projects.gallery.open')}
-        className='group relative block w-full overflow-hidden rounded-xl border border-[var(--color-text-subtle)]/20 bg-[var(--color-bg-base)] text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]'
+        className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-dark)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)] cursor-pointer'
       >
-        <img
-          src={activeScreenshot.src}
-          alt={t(activeScreenshot.altKey)}
-          className='aspect-video w-full object-contain'
-          loading='lazy'
-        />
-        {activeScreenshot.isPlaceholder && (
-          <span className='pointer-events-none absolute left-3 top-3 rounded-md bg-black/70 px-2.5 py-1 font-mono text-2xs font-bold uppercase tracking-wider text-white'>
-            {t('projects.gallery.placeholder')}
-          </span>
-        )}
-        <span className='absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-8 text-sm font-semibold text-white opacity-90 group-hover:opacity-100'>
-          {t('projects.gallery.open')} ({screenshots.length})
+        <FontAwesomeIcon icon={faImages} />
+        <span>
+          {t('projects.gallery.open')} · {screenshots.length}
         </span>
       </button>
 
@@ -141,12 +132,7 @@ export const ProjectGallery = ({ screenshots }: ProjectGalleryProps) => {
                     : 'border-transparent opacity-70 hover:opacity-100'
                 }`}
               >
-                <img
-                  src={screenshot.src}
-                  alt=''
-                  className='h-14 w-24 object-cover sm:h-16 sm:w-28'
-                  loading='lazy'
-                />
+                <img src={screenshot.src} alt='' className='h-14 w-24 object-cover sm:h-16 sm:w-28' loading='lazy' />
               </button>
             ))}
           </div>
