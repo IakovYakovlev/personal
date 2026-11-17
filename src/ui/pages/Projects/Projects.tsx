@@ -144,7 +144,7 @@ export const Projects = () => {
             <article
               key={project.id}
               id={project.id}
-              className='group relative scroll-mt-24 overflow-hidden rounded-xl border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-muted)] p-4 transition-colors hover:border-[var(--color-primary)]/50 lg:p-5'
+              className='group relative flex flex-col scroll-mt-24 overflow-hidden rounded-xl border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-muted)] p-4 transition-colors hover:border-[var(--color-primary)]/50 lg:p-5'
             >
               <span className='absolute top-0 left-0 w-3 h-3 border-l-2 border-t-2 border-[var(--color-primary)]/40 rounded-tl-xl pointer-events-none' />
 
@@ -159,40 +159,42 @@ export const Projects = () => {
                 {project.description}
               </p>
 
-              <div className='flex flex-wrap gap-2 mb-4'>
-                {project.tech.map((tech) => (
-                  <span
-                    key={tech}
-                    className='px-2.5 py-1 text-2xs font-mono rounded-lg bg-[var(--color-bg-base)] text-[var(--color-text-subtle)] border border-[var(--color-text-subtle)]/15'
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <div className='mt-auto'>
+                <div className='mb-4 flex flex-wrap gap-2'>
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className='rounded-lg border border-[var(--color-text-subtle)]/15 bg-[var(--color-bg-base)] px-2.5 py-1 font-mono text-2xs text-[var(--color-text-subtle)]'
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-              <div className='flex flex-wrap gap-3 mt-auto pt-3 border-t border-[var(--color-text-subtle)]/15'>
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition-colors'
-                  >
-                    <FontAwesomeIcon icon={faGithub} />
-                    <span>GitHub</span>
-                  </a>
-                )}
-                {project.links.demo && (
-                  <a
-                    href={project.links.demo}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] transition-colors'
-                  >
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    <span>{t('projects.demo')}</span>
-                  </a>
-                )}
+                <div className='flex flex-wrap gap-3 border-t border-[var(--color-text-subtle)]/15 pt-3'>
+                  {project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-dark)]'
+                    >
+                      <FontAwesomeIcon icon={faGithub} />
+                      <span>GitHub</span>
+                    </a>
+                  )}
+                  {project.links.demo && (
+                    <a
+                      href={project.links.demo}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-dark)]'
+                    >
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      <span>{t('projects.demo')}</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}
