@@ -133,14 +133,19 @@
   "contact": {
     "section": "Связаться",
     "title": "Контакты",
-    "intro": "Буду рад обсудить проекты, идеи и варианты сотрудничества. Связаться со мной можно любым удобным способом:",
+    "intro": "Буду рад обсудить веб-разработку на .NET и React, автоматизацию бизнес-процессов и AI-инструменты для работы с документами.",
     "copyEmail": "Скопировать адрес электронной почты",
     "emailCopied": "Адрес электронной почты скопирован",
+    "emailCopiedShort": "Скопировано",
+    "responseTime": "Обычно отвечаю в течение 1–2 рабочих дней.",
+    "sendEmail": "Написать на email",
+    "socialsIntro": "Также меня можно найти здесь:",
     "methods": {
       "email": "Email",
       "github": "GitHub",
       "telegram": "Telegram",
-      "facebook": "Facebook"
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
     }
   },
   "projects": {

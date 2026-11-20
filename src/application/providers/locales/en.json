@@ -133,14 +133,19 @@
   "contact": {
     "section": "Get in Touch",
     "title": "Contact",
-    "intro": "I’ll be glad to discuss projects, ideas, or opportunities for collaboration. You can reach me in any convenient way:",
+    "intro": "I’d be glad to discuss .NET and React web development, business process automation, and AI tools for document workflows.",
     "copyEmail": "Copy email address",
     "emailCopied": "Email address copied",
+    "emailCopiedShort": "Copied",
+    "responseTime": "I usually respond within 1–2 business days.",
+    "sendEmail": "Send me an email",
+    "socialsIntro": "You can also find me here:",
     "methods": {
       "email": "Email",
       "github": "GitHub",
       "telegram": "Telegram",
-      "facebook": "Facebook"
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn"
     }
   },
   "projects": {
