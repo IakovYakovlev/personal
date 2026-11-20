@@ -12,8 +12,7 @@ export const Home = () => {
       <main className='w-full'>
         {/* Главный заголовок и контент */}
         <div className='max-w-3xl mb-3 lg:mb-5'>
-          <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2 lg:mb-3'>
-            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+          <div className='inline-flex items-center font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2 lg:mb-3'>
             {t('home.section')}
           </div>
 

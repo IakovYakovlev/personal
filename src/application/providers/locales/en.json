@@ -13,7 +13,7 @@
     "contact": "Contact"
   },
   "home": {
-    "section": "Engineering Profile",
+    "section": "// ENGINEERING PROFILE",
     "role": "Reliable Web Services",
     "description": "Fullstack web developer with 5+ years of experience. I specialize in business automation and building reliable digital solutions. I turn chaotic spreadsheet accounting and manual workflows into smooth, efficient systems — built with intuitive user interfaces and solid architecture.",
     "cta": {
@@ -40,7 +40,7 @@
     }
   },
   "about": {
-    "section": "Engineering Background",
+    "section": "// ENGINEERING BACKGROUND",
     "title": "About Me",
     "block1_label": "// 01. STACK & PROFILE",
     "intro": "Fullstack Developer (C# / .NET · TypeScript / React) with 5+ years of experience. I build robust web applications for business automation, architect systems, and deliver end-to-end user interfaces.",
@@ -64,7 +64,7 @@
     }
   },
   "skills": {
-    "section": "Technical Skills",
+    "section": "// TECHNICAL SKILLS",
     "title": "Skills",
     "appliedIn": "Applied in",
     "intro": "I use a technology stack that covers the key aspects of development: creating user-friendly interfaces, reliable server-side systems, and efficient databases.",
@@ -131,7 +131,7 @@
     }
   },
   "contact": {
-    "section": "Get in Touch",
+    "section": "// GET IN TOUCH",
     "title": "Contact",
     "intro": "I’d be glad to discuss .NET and React web development, business process automation, and AI tools for document workflows.",
     "copyEmail": "Copy email address",
@@ -149,7 +149,7 @@
     }
   },
   "projects": {
-    "section": "Selected Work",
+    "section": "// SELECTED PROJECTS",
     "projectLabel": "PROJECT",
     "demo": "Demo",
     "featuredLabel": "Featured Project",

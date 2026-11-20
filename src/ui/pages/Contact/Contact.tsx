@@ -15,11 +15,10 @@ export const Contact = () => {
   ];
 
   return (
-    <div className='flex-1 w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3'>
+    <div className='flex flex-1 flex-col w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3 [@media(min-height:700px)]:justify-center'>
       <main className='w-full max-w-4xl mx-auto'>
         <div className='mb-6 lg:mb-8 text-center'>
-          <div className='inline-flex items-center justify-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2'>
-            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+          <div className='inline-flex items-center justify-center font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2'>
             {t('contact.section')}
           </div>
           <h1 className='text-3xl md:text-4xl font-bold text-[var(--color-text-base)] tracking-tight mb-2'>

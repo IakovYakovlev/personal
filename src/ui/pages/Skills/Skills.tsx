@@ -26,8 +26,7 @@ export const Skills = () => {
     <div className='flex-1 w-full max-w-6xl mx-auto px-6 md:px-12 py-2 lg:py-3'>
       <main className='w-full'>
         <div className='max-w-3xl mb-5 lg:mb-7'>
-          <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2'>
-            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+          <div className='inline-flex items-center font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider mb-2'>
             {t('skills.section')}
           </div>
           <h1 className='text-3xl md:text-4xl font-bold text-[var(--color-text-base)] tracking-tight mb-2'>

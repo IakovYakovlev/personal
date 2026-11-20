@@ -11,8 +11,7 @@ export const About = () => {
       <main className='w-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start'>
         {/* ТЕКСТОВЫЕ БЛОКИ (на десктопе слева) */}
         <div className='lg:col-span-8 lg:order-1 flex flex-col justify-start space-y-2.5'>
-          <div className='inline-flex items-center gap-2 font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider'>
-            <span className='w-2 h-2 rounded-full bg-[var(--color-primary)]' />
+          <div className='inline-flex items-center font-mono text-xs text-[var(--color-primary)] font-bold uppercase tracking-wider'>
             {t('about.section')}
           </div>
 
